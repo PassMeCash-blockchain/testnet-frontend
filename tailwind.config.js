@@ -10,7 +10,8 @@ module.exports = {
       'warningColor': '#F3AF0A',
       'dangerColor': '#EA4335',
       'processingColor': '#4564D6',
-      'greenColor':'#0AC18E'
+      'greenColor': '#0AC18E',
+      'greyColor':'#E5D8FD'
     },
     },
   },

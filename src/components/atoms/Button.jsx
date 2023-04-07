@@ -1,9 +1,9 @@
 import React from 'react'
  
-const button = ({className,children}) => {
+const Button = ({className,children}) => {
   return (
       <button className={`${className} rounded-md`}>{ children}</button>
   )
 }
 
-export default button
+export default Button
