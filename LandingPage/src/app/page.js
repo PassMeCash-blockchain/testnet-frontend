@@ -13,7 +13,9 @@ export default function Home() {
       <SectionSpacing className={`flex justify-around items-center`}>
         <WhatWeDo />
       </SectionSpacing>
+      <TextSlider />
       <Swap />
+      <Services />
     </main>
   );
 }
