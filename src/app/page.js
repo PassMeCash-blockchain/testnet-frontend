@@ -1,10 +1,10 @@
 import { Archivo } from "next/font/google";
 
-const Archivo = Archivo({ subsets: ["latin"] });
+const archivo = Archivo({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className="">
       <h1>This is the home page.</h1>
     </main>
   );
