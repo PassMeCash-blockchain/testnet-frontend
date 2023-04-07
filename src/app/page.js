@@ -4,7 +4,7 @@ const archivo = Archivo({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="">
+    <main className={archivo.className}>
       <h1>This is the home page.</h1>
     </main>
   );
