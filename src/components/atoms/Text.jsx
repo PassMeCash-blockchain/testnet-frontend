@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Text = ({Children,className}) => {
-  return (
-      <p className={`${className}` }>{ Children }</p>
-  )
-}
+const Text = ({ children, className }) => {
+  return <p className={`${className}`}>{children}</p>;
+};
 
-export default Text
+export default Text;
