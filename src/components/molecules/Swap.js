@@ -1,14 +1,16 @@
 import React from "react";
 import InputField from "../atoms/InputField";
 import Text from "../atoms/Text";
+import { Images } from "../atoms/libraries";
 import Button from "../atoms/Button";
+import Ng from "../../../public/SVG/ng_Nigeria.svg";
 
 const Swap = () => {
   return (
-    <div className="grid my-44 place-items-center">
-      <div className="grid grid-cols-2">
-        <div className="w-96">
-          <div className="w-[400px]">
+    <div className="grid my-44 place-content-center">
+      <div className="grid lg:grid-cols-2">
+        <div className="w-[380px]">
+          <div className="lg:w-full">
             <Text className="font-semibold text-4xl leading-[120%] tracking-[-0.005em] text-[#0B011D]">
               Swap crypto for cash quickly at a good rate.{" "}
             </Text>
@@ -17,29 +19,40 @@ const Swap = () => {
               currency.
             </Text>
           </div>
-          <div className="mt-12 mb-5 grid gap-5 grid-cols-2">
+          <div className="mt-12 w-full mb-5 grid gap-4 grid-cols-3">
             <InputField
               type="text"
-              className="w-[200px] px-5 py-2 h-12 rounded-md bg-[#F0F0F0]"
+              className="w-full px-5 py-2 h-12 rounded-md bg-[#F0F0F0] col-span-2"
               placeholder="Amount |"
             />
+            <select className="w-full justify-self-start text-center rounded-md bg-[#F0F0F0]">
+              <option value="volvo">USDT</option>
+              <option value="saab">STR</option>
+              <option value="fiat">STR</option>
+            </select>
             <InputField
               type="text"
-              className="w-24 px-5 py-2 rounded-md bg-[#F0F0F0]"
-            />
-            <InputField
-              type="text"
-              className="w-[200px] px-5 py-2 h-12 rounded-md bg-[#F0F0F0]"
+              className="w-full px-5 py-2 h-12 rounded-md bg-[#F0F0F0] col-span-2"
               placeholder="Convert | 12787799.68"
             />
-            <InputField
-              type="text"
-              className="w-24 px-5 py-2 rounded-md bg-[#F0F0F0]"
-            />
+            <select className="w-full text-center rounded-md bg-[#F0F0F0]">
+              <option value="volvo">NGN</option>
+              <option value="saab">STR</option>
+              <option value="fiat">STR</option>
+            </select>
           </div>
-          <Button></Button>
+          <Button filled className="w-full">
+            Exchange now
+          </Button>
         </div>
-        <div>Image</div>
+        <div className="lg:grid place-content-center hidden">
+          <Images
+            className="hidden lg:inline-block"
+            src={`/assets/rocket.png`}
+            width={300}
+            height={300}
+          />
+        </div>
       </div>
     </div>
   );
