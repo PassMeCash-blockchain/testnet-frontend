@@ -1,11 +1,11 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import TextSlider from "@/components/molecules/TextSlider";
+import { Archivo } from "next/font/google";
+
+const archivo = Archivo({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div>
-      <TextSlider />
-    </div>
+    <main className={archivo.className}>
+      <h1>This is the home page.</h1>
+    </main>
   );
 }
