@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Text = ({Children,className}) => {
+const Text = ({children,className}) => {
   return (
-      <p className={`${className}` }>{ Children }</p>
+      <p className={`${className}` }>{ children }</p>
   )
 }
 
