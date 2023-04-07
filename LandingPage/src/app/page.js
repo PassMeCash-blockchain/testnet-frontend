@@ -4,8 +4,8 @@ import { Archivo } from "next/font/google";
 import Services from "@/components/organisms/Services";
 
 const archivo = Archivo({ subsets: ["latin"] });
-import TextSlider from "@/components/molecules/TextSlider";
-import Swap from "@/components/molecules/Swap";
+import TextSlider from "@/components/organisms/TextSlider";
+import Swap from "@/components/organisms/Swap";
 
 export default function Home() {
   return (

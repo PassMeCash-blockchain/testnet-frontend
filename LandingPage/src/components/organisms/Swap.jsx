@@ -3,7 +3,6 @@ import InputField from "../atoms/InputField";
 import Text from "../atoms/Text";
 import { Images } from "../atoms/libraries";
 import Button from "../atoms/Button";
-import Ng from "../../../public/SVG/ng_Nigeria.svg";
 
 const Swap = () => {
   return (
