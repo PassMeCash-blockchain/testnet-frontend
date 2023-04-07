@@ -1,29 +1,47 @@
 import Image from "next/image";
 import Text from "../atoms/Text";
 import { Heading } from "../atoms/Heading";
+import Button from "../atoms/Button";
+import clsx from "clsx";
 
-const ServiecesSection = () => {
+const ServiecesSection = ({
+  img,
+  inverted,
+  header,
+  title,
+  text,
+  btnText,
+  btnLink,
+}) => {
   return (
-    <div>
+    <di className="grid grid-cols-2 place-items-center">
       {/* Image */}
-      <div className="relative w-1/2 h-40">
-        <Image src="/assets/service-img1.png" fill alt="Side Image" />
+      <div
+        className={clsx(
+          "relative w-full h-[50vw] max-h-[738px]",
+          inverted && "order-1"
+        )}
+      >
+        <Image src={img} fill alt="Side Image" />
       </div>
 
       {/* Contents */}
-      <div>
+      <div className="px-20">
         <h2 className="relative before:w-20 before:h-[3px] before:absolute before:bg-[#E5D8FD] before:-bottom-1">
-          Our Services
+          {header}
         </h2>
-        <Heading>Order for spray bills</Heading>
-        <Text>
-          We understand how difficult it is to get your fund when you try to
-          make a withdrawal. That is why we are making it seamless for our users
-          to make a quick request of their money that can be delivered to you
-          from any of our close agents by bank transfer or a meeting point.
-        </Text>
+
+        <div className="pt-8">
+          <Heading level={2} className="font-semibold">
+            {title}
+          </Heading>
+          <Text className="pt-5">{text}</Text>
+          <Button filled className="mt-8 w-full max-w-md">
+            {btnText}
+          </Button>
+        </div>
       </div>
-    </div>
+    </di>
   );
 };
 
