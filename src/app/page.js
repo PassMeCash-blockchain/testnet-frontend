@@ -1,3 +1,5 @@
+import WhatWeDo from "@/components/organisms/WhatWeDo";
+import SectionSpacing from "@/components/templates/SectionSpacing";
 import { Archivo } from "next/font/google";
 
 const archivo = Archivo({ subsets: ["latin"] });
