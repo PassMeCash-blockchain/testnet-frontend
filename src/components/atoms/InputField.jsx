@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
-const inputField = ({onChange,className,type}) => {
+const inputField = ({ onChange, className, type, placeholder }) => {
   return (
-      <input type={type} className={ `${className}`} onchange={onChange} />
-  )
-}
+    <input
+      type={type}
+      className={`${className}`}
+      placeholder={placeholder}
+      onchange={onChange}
+    />
+  );
+};
 
-export default inputField
+export default inputField;
