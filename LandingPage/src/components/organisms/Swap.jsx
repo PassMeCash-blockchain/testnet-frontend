@@ -1,9 +1,14 @@
-import React from "react";
 import InputField from "../atoms/InputField";
 import Text from "../atoms/Text";
 import Button from "../atoms/Button";
 import Image from "next/image";
 import SectionSpacing from "../templates/SectionSpacing";
+import { clients } from "../components/atoms/libraries";
+import { gqls } from "../components/atoms/libraries";
+
+export async function fetchData() {
+  
+}
 
 const Swap = () => {
   return (
