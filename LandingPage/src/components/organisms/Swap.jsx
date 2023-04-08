@@ -3,11 +3,11 @@ import InputField from "../atoms/InputField";
 import Text from "../atoms/Text";
 import { Images } from "../atoms/libraries";
 import Button from "../atoms/Button";
-import { clients } from "../components/atoms/libraries";
-import { gqls } from "../components/atoms/libraries";
+import { clients, gqls } from '../atoms/libraries';
+
 
 export async function fetchData() {
-  
+
 }
 
 

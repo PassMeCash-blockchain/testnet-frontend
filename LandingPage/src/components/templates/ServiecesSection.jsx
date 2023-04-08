@@ -3,12 +3,6 @@ import Text from "../atoms/Text";
 import { Heading } from "../atoms/Heading";
 import Button from "../atoms/Button";
 import clsx from "clsx";
-import { clients } from "../components/atoms/libraries";
-import { gqls } from "../components/atoms/libraries";
-
-export async function fetchData() {
-  
-}
 
 const ServiecesSection = ({
   img,
@@ -20,7 +14,7 @@ const ServiecesSection = ({
   btnLink,
 }) => {
   return (
-    <div className="grid grid-cols-2 place-items-center">
+    <di className="grid grid-cols-2 place-items-center">
       {/* Image */}
       <div
         className={clsx(
