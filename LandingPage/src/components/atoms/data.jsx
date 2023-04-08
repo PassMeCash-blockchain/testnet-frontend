@@ -8,7 +8,7 @@ export async function getStaticProps() {
     };
    }
 
-   const data = await client.query({
+   const headerData = await client.query({
     query: gql`
        query ProductsQuery {
           products {
