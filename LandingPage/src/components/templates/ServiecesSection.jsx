@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Text from "../atoms/Text";
-import { Heading } from "../atoms/Heading";
+import Heading from "../atoms/Heading";
 import Button from "../atoms/Button";
 import clsx from "clsx";
 

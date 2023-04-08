@@ -1,8 +1,8 @@
 import React from "react";
 import InputField from "../atoms/InputField";
 import Text from "../atoms/Text";
-import { Images } from "../atoms/libraries";
 import Button from "../atoms/Button";
+import Image from "next/image";
 
 const Swap = () => {
   return (
@@ -45,7 +45,7 @@ const Swap = () => {
           </Button>
         </div>
         <div className="lg:grid place-content-center hidden">
-          <Images
+          <Image
             className="hidden lg:inline-block"
             src={`/assets/rocket.png`}
             width={300}

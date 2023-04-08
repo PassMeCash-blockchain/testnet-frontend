@@ -10,12 +10,10 @@ import Swap from "@/components/organisms/Swap";
 export default function Home() {
   return (
     <main className={archivo.className}>
-      <SectionSpacing className={`flex justify-around items-center`}>
-        <WhatWeDo />
-      </SectionSpacing>
       <TextSlider />
       <Swap />
       <Services />
+      <WhatWeDo />
     </main>
   );
 }
