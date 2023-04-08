@@ -3,14 +3,41 @@ import Button from "../atoms/Button";
 import { Heading } from "../atoms/Heading";
 import Text from "../atoms/Text";
 import SectionSpacing from "../templates/SectionSpacing";
+import { clients } from "../components/atoms/libraries";
+import { gqls } from "../components/atoms/libraries";
 
-const Hero = (allHeroData) => {
+export async function fetchData() {
+  const {data: heroData} = await clients.query({
+    query: gqls`
+    query MyQuery {
+heroSection(where: {id: "clg6q344f0lzu0bk6msy5muc8"}) {
+  buttons
+  heroTextB
+  heroTextMedium
+  heroTextSmall
+  heroImage {
+    url
+  }
+}
+}
+    `,
+ });
+ const {allHeroData} = heroData.heroSection;
+ return{
+  allHeroData,
+ };
+
+}
+
+const Hero = async () => {
+  const res = await fetchData()
+
   return (
     <SectionSpacing>
       <div className="grid grid-cols-2">
         <div className="">
           <Text className={"font-normal text-lg py-3"}>
-            {allHeroData.heroTextMedium}
+            {res.allHeroData.heroTextMedium}
           </Text>
           <Heading level={1} className={"font-bold text-5xl tracking-wide"}>
             {allHeroData.heroTextB}
