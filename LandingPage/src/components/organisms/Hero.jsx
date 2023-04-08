@@ -4,29 +4,26 @@ import { Heading } from "../atoms/Heading";
 import Text from "../atoms/Text";
 import SectionSpacing from "../templates/SectionSpacing";
 
-const Hero = () => {
+const Hero = (allHeroData) => {
   return (
     <SectionSpacing>
       <div className="grid grid-cols-2">
         <div className="">
           <Text className={"font-normal text-lg py-3"}>
-            DONT BE STRANDED ANYMORE!
+            {allHeroData.heroTextMedium}
           </Text>
           <Heading level={1} className={"font-bold text-5xl tracking-wide"}>
-            Access <span className="text-primaryColor">cash</span> at hand{" "}
-            <br></br> <span className="text-primaryColor">speedily</span> via
-            your crypto <br></br> or cash{" "}
-            <span className="text-primaryColor">order</span>.
+            {allHeroData.heroTextB}
           </Heading>
           <Text className={"text-base font-normal py-3"}>
-            Want to buy/sell or trade cryptocurrencies with a small <br></br>
-            commission? our platform is the best place for you.
+            {allHeroData.heroTextSmall}
           </Text>
           <div className="flex gap-6">
+            
             <Button filled className={"w-44"}>
-              Sign up
+              {allHeroData.buttons.button1.title}
             </Button>
-            <Button className={"w-48"}>Request Money</Button>
+            <Button className={"w-48"}>{allHeroData.buttons.button2.title}</Button>
           </div>
         </div>
 
