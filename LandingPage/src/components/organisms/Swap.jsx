@@ -1,13 +1,17 @@
 import InputField from "../atoms/InputField";
 import Text from "../atoms/Text";
 import Button from "../atoms/Button";
+
+import { clients, gqls } from '../atoms/libraries';
+
 import Image from "next/image";
 import SectionSpacing from "../templates/SectionSpacing";
 import { clients } from "../components/atoms/libraries";
 import { gqls } from "../components/atoms/libraries";
 
+
 export async function fetchData() {
-  
+
 }
 
 const Swap = () => {

@@ -3,10 +3,13 @@ import Text from "../atoms/Text";
 import Heading from "../atoms/Heading";
 import Button from "../atoms/Button";
 import clsx from "clsx";
+
+
 import { clients } from "../components/atoms/libraries";
 import { gqls } from "../components/atoms/libraries";
 
 export async function fetchData() {}
+
 
 const ServiecesSection = ({
   img,
@@ -19,7 +22,11 @@ const ServiecesSection = ({
   btnLink,
 }) => {
   return (
+
+    <di className="grid grid-cols-2 place-items-center">
+
     <div className="grid place-items-center shadow-[-24px_0px_32px_-8px_rgba(0,0,0,0.05),_0px_24px_32px_-8px_rgba(0,_0,_0,_0.05)] rounded-lg py-10 container mx-auto md:grid-cols-2 md:py-0 md:rounded-none md:shadow-none md:max-w-none">
+
       {/* Image */}
       <div
         className={clsx(

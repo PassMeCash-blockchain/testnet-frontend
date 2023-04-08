@@ -1,7 +1,6 @@
 import React from "react";
 import Text from "../atoms/Text";
-import { clients } from "../components/atoms/libraries";
-import { gqls } from "../components/atoms/libraries";
+import { clients, gqls } from '../atoms/libraries';
 
 export async function fetchData() {
   

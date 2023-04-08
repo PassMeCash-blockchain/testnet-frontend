@@ -27,6 +27,20 @@ whatWeDoSection(where: {id: "clg7scrao0zyc0bk6wr1ybxk8"}) {
   };
 }
 const WhatWeDo = async () => {
+
+  const res = await fetchData()
+
+  console.log(res.allWhatWeDoData.wwdImage.url)
+  return (
+    <>
+      <div className="mx-auto">
+        <div className="flex flex-col lg:flex-row gap-[5rem]">
+          <Images
+            className="hidden lg:inline-block"
+            src={res.allWhatWeDoData.wwdImage.url}
+            width={200}
+            height={200}
+
   const res = await fetchData();
   return (
     <SectionSpacing>
@@ -38,6 +52,7 @@ const WhatWeDo = async () => {
             src="/assets/rocketboy.svg"
             fill
             alt="Illustration"
+
           />
         </div>
 

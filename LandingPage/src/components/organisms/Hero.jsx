@@ -3,8 +3,8 @@ import Button from "../atoms/Button";
 import { Heading } from "../atoms/Heading";
 import Text from "../atoms/Text";
 import SectionSpacing from "../templates/SectionSpacing";
-import { clients } from "../components/atoms/libraries";
-import { gqls } from "../components/atoms/libraries";
+import { clients, gqls } from '../atoms/libraries';
+
 
 export async function fetchData() {
   const {data: heroData} = await clients.query({
