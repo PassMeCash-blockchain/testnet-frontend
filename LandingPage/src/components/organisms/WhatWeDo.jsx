@@ -1,6 +1,32 @@
 import { Images } from '../atoms/libraries'
 import WhatWeDoSection from '../molecules/WhatWeDoSection'
-const WhatWeDo = () => {
+import { clients, gqls } from '../atoms/libraries';
+
+
+export async function fetchData() {
+  const {data: whatWeDoData} = await clients.query({
+    query: gqls`
+    query MyQuery {
+whatWeDoSection(where: {id: "clg7scrao0zyc0bk6wr1ybxk8"}) {
+  id
+  wwdTitleBig
+  wwdTitle
+  wwdImage {
+    url
+  }
+  wwdDescription
+  wwdBtn
+}
+}
+    `,
+ });
+ const allWhatWeDoData = whatWeDoData.whatWeDoSection;
+ return {
+  allWhatWeDoData
+};
+}
+const WhatWeDo = async () => {
+  const res = await fetchData()
   return (
     <>
       <div className="mx-auto">
@@ -11,7 +37,7 @@ const WhatWeDo = () => {
             width={200}
             height={200}
           />
-          <WhatWeDoSection />
+          <WhatWeDoSection  />
         </div>
       </div>
     </>
