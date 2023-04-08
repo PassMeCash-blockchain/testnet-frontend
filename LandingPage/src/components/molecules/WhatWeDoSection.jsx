@@ -3,7 +3,7 @@ import { Heading } from '../atoms/Heading'
 import Text from '../atoms/Text'
 import Button from './../atoms/Button';
 
-const WhatWeDoSection = () => {
+const WhatWeDoSection = (allWhatWeDoData) => {
   return (
     <div className="flex flex-col gap-2 justify-center items-center lg:justify-start lg:items-start">
       <Heading level={4} className="border-b-4  border-greyColor px-4 lg:px-0">
