@@ -1,5 +1,11 @@
 import React from "react";
 import Text from "../atoms/Text";
+import { clients } from "../components/atoms/libraries";
+import { gqls } from "../components/atoms/libraries";
+
+export async function fetchData() {
+  
+}
 
 const Coin = [
   "Stack",

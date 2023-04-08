@@ -8,21 +8,7 @@ import { gqls } from "../components/atoms/libraries";
 
 export async function fetchData() {
     
-   const {data: heroData} = await clients.query({
-      query: gqls`
-      query MyQuery {
-  heroSection(where: {id: "clg6q344f0lzu0bk6msy5muc8"}) {
-    buttons
-    heroTextB
-    heroTextMedium
-    heroTextSmall
-    heroImage {
-      url
-    }
-  }
-}
-      `,
-   });
+   
    const {data: partnerData} = await clients.query({
       query: gqls`
       query MyQuery {
@@ -49,11 +35,9 @@ export async function fetchData() {
 }
       `,
    });
-   const {allHeroData} = heroData;
    const {allPartnerData} = partnerData;
    const {allCalculatorData} = calculatorData.calculatorSection;
     return {
-         allHeroData,
          allPartnerData,
          allCalculatorData
     };

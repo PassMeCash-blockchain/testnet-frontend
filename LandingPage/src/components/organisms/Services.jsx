@@ -1,4 +1,10 @@
 import ServiecesSection from "../templates/ServiecesSection";
+import { clients } from "../components/atoms/libraries";
+import { gqls } from "../components/atoms/libraries";
+
+export async function fetchData() {
+  
+}
 
 const Services = () => {
   const schema = {
