@@ -1,6 +1,6 @@
 import Image from "next/image";
-import clsx from 'clsx';
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+import clsx from "clsx";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import client from "../../../apolloClient";
 
 export const Images = Image;

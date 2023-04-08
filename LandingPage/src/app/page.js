@@ -46,17 +46,19 @@ export async function fetchData() {
 const archivo = Archivo({ subsets: ["latin"] });
 import TextSlider from "@/components/organisms/TextSlider";
 import Swap from "@/components/organisms/Swap";
+import Header from "@/components/organisms/Header";
+import Hero from "@/components/organisms/Hero";
 
 export default async function Home() {
   const res = await fetchData()
   return (
     <main className={archivo.className}>
-      <SectionSpacing className={`flex justify-around items-center`}>
-        <WhatWeDo />
-      </SectionSpacing>
-      <TextSlider />
-      <Swap />
+      <Header />
+      <Hero />
+      {/* <TextSlider /> */}
+      {/* <Swap /> */}
       <Services />
+      <WhatWeDo />
     </main>
   );
 }

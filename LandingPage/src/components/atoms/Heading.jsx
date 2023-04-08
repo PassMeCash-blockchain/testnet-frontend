@@ -1,5 +1,6 @@
 import { clsxes } from "./libraries";
-export const Heading = ({ children, className, level }) => {
+
+const Heading = ({ children, className, level }) => {
   switch (level) {
     case 1:
       return <h1 className={clsxes("text-3xl", className)}>{children}</h1>;
@@ -18,3 +19,5 @@ export const Heading = ({ children, className, level }) => {
       return <h6 className={clsxes("text-xs", className)}>{children}</h6>;
   }
 };
+
+export default Heading;
