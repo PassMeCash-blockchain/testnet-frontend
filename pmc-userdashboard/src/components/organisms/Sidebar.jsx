@@ -1,18 +1,13 @@
-import { useRouter } from 'next/router'
-import { sidebarnav } from '../atoms/sidebarnav'
-import { Images } from '../atoms/libraries';
+import pmc from '/public/assets/pmc.png'
+import { Images } from '../atoms/libraries'
+import SideLink from './SideLink'
 const Sidebar = () => {
-    const router = useRouter();
   return (
-      <div>
-          {sidebarnav.map((e, key) => (
-              <ul className='flex flex-col gap-5'>
-                  <li onClick={() => router.push(e.link)} className='flex gap-5'>
-                    <Images src={e.icon} width={30} height={10}/>
-                     {e.title}
-                  </li>
-              </ul>
-          ))}
+      <div className='flex flex-col bg-primaryColor min-h-[100vh] w-[14vw] justify-start items-center pt-5'>
+          <Images src={pmc} width={50} height={50} />
+          <div className='mt-5'>
+              <SideLink/>
+          </div>
     </div>
   )
 }
