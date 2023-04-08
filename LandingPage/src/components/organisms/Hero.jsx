@@ -34,27 +34,29 @@ const Hero = async () => {
 
   return (
     <SectionSpacing>
-      <div className="grid grid-cols-2">
-        <div className="">
+      <div className="grid grid-cols-[1fr_50vw] container mx-auto">
+        <div className="pt-10">
           <Text className={"font-normal text-lg py-3"}>
             {res.allHeroData.heroTextMedium}
           </Text>
-          <Heading level={1} className={"font-bold text-5xl tracking-wide"}>
-            {allHeroData.heroTextB}
-          </Heading>
-          <Text className={"text-base font-normal py-3"}>
-            {allHeroData.heroTextSmall}
+          <h1 className="font-bold text-5xl mt-6">
+            Access <span className="text-primaryColor">cash</span> at hand{" "}
+            <span className="text-primaryColor">speedily</span> via your crypto
+            or cash <span className="text-primaryColor">order</span>.
+          </h1>
+
+          <Text className="text-base font-normal py-3 mt-6">
+            Want to buy/sell or trade cryptocurrencies with a small <br></br>
+            commission? our platform is the best place for you.
           </Text>
-          <div className="flex gap-6">
-            
-            <Button filled className={"w-44"}>
-              {allHeroData.buttons.button1.title}
-            </Button>
-            <Button className={"w-48"}>{allHeroData.buttons.button2.title}</Button>
+
+          <div className="grid grid-cols-2 gap-5 mt-8">
+            <Button filled>Sign up</Button>
+            <Button>Request Money</Button>
           </div>
         </div>
 
-        <div className="relative w-full h-[50vw]">
+        <div className="relative w-full h-[45vw]">
           <Image src="/assets/hero-img.png" fill alt="hero image" />
         </div>
       </div>
