@@ -13,7 +13,7 @@ const Coin = [
   "Polygon",
 ];
 
-const TextSlider = () => {
+const TextSlider = (allPartnerData) => {
   return (
     // text-wrapper
     <div className="flex justify-center overflow-hidden bg-neutral-100">
@@ -21,6 +21,7 @@ const TextSlider = () => {
         <div key={i} className="my-5 mx-14">
           <Text className="font-normal text-4xl leading-[140%] tracking-[0.015em] text-[#0B011D] animate-moveRTL">
             {coin}
+            {/* {console.log(allPartnerData.partner)} */}
           </Text>
         </div>
       ))}

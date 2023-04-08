@@ -4,13 +4,13 @@ import { Heading } from "../atoms/Heading";
 import Text from "../atoms/Text";
 import SectionSpacing from "../templates/SectionSpacing";
 
-const Hero = () => {
+const Hero = (allHeroData) => {
   return (
     <SectionSpacing>
       <div className="grid grid-cols-[1fr_50vw] container mx-auto">
         <div className="pt-10">
           <Text className={"font-normal text-lg py-3"}>
-            DONT BE STRANDED ANYMORE!
+            {allHeroData.heroTextMedium}
           </Text>
           <h1 className="font-bold text-5xl mt-6">
             Access <span className="text-primaryColor">cash</span> at hand{" "}

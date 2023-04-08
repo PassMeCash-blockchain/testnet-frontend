@@ -1,10 +1,33 @@
 import Image from "next/image";
-import Heading from "../atoms/Heading";
 import Text from "../atoms/Text";
 import Button from "../atoms/Button";
 import SectionSpacing from "../templates/SectionSpacing";
+import { clients, gqls } from "../atoms/libraries";
 
-const WhatWeDo = () => {
+export async function fetchData() {
+  const { data: whatWeDoData } = await clients.query({
+    query: gqls`
+    query MyQuery {
+whatWeDoSection(where: {id: "clg7scrao0zyc0bk6wr1ybxk8"}) {
+  id
+  wwdTitleBig
+  wwdTitle
+  wwdImage {
+    url
+  }
+  wwdDescription
+  wwdBtn
+}
+}
+    `,
+  });
+  const allWhatWeDoData = whatWeDoData.whatWeDoSection;
+  return {
+    allWhatWeDoData,
+  };
+}
+const WhatWeDo = async () => {
+  const res = await fetchData();
   return (
     <SectionSpacing>
       <div className="grid gap-20 items-center container mx-auto md:grid-cols-[2fr_3fr] lg:max-w-4xl">
