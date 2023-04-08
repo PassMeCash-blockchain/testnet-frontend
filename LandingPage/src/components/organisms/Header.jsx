@@ -27,7 +27,8 @@ export async function fetchData() {
 }
 
 
-const Header = () => {
+const Header = async () => {
+  const res = await fetchData()
   //   const [dropdownOpen, setdropdownOpen] = useState(false);
   return (
     <SectionSpacing>
