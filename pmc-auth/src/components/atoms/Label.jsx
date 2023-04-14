@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Label = ({className,Children}) => {
+const Label = ({className,children}) => {
   return (
-      <label className={className}>{ Children}</label>
+      <label className={className}>{ children}</label>
   )
 }
 

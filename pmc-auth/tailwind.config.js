@@ -11,7 +11,10 @@ module.exports = {
         dangerColor: "#EA4335",
         processingColor: "#4564D6",
         greenColor: "#0AC18E",
-        acctColor:"#F2ECFE"
+        acctColor: "#F2ECFE",
+        tertiaryColor: '#AAAAAA',
+        grayColor: '#ABA6A6',
+        universalColor:'#FCFCFC'
       },
       keyframes: {
         moveRTL: {
