@@ -21,7 +21,7 @@ const Register = ({ className }) => {
         <div className="space-y-5 mt-5">
           <Phone />
           <InputField
-            className={`w-full lg:w-[24rem] border-2 border-grayColor p-2`}
+            className={`w-full lg:w-[24rem] border-2 border-grayColor p-2 lg:top-[14%]`}
             placeHolder={`Password`}
             hasIcon={!0}
             icon={EyeLash}
@@ -29,7 +29,7 @@ const Register = ({ className }) => {
           <Text className={`text-center w-[24rem]`}>
             Use at least 8 characters -1 uppercase letter, 1 number and 1 symbol
           </Text>
-          <Button filled className={`w-full `}>
+          <Button filled className={`w-full lg:w-[24rem] `}>
             Sign Up
           </Button>
           <Text className={`text-center w-[24rem]`}>
