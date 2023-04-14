@@ -1,9 +1,10 @@
 import Image from "next/image";
 import clsx from 'clsx';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
-
+import ReCAPTCHA from "react-google-recaptcha";
 export const Images = Image;
 export const clsxes = clsx;
 export const ApolloClients = ApolloClient;
 export const InMemoryCaches = InMemoryCache;
 export const gqls = gql;
+export const recapture = ReCAPTCHA;

@@ -7,32 +7,41 @@ import EyeLash from '../../../public/assets/EyeSlash.png'
 import Text from '../atoms/Text'
 import Button from '../atoms/Button'
 import { ReCapture } from '../molecules/reCapture'
-const Register = ({ className }) => {
+
+const Login = ({className}) => {
   return (
-    <div className={`${className} w-full`}>
+      <div className={`${className} w-full`}>
       <div className="bg-universalColor  min-h-screen text p-5 w-full">
         <div className="flex justify-center lg:justify-start">
           <Images src={PassMeCash} width={50} height={50} />
         </div>
 
         <Heading level={2} className={`text-center lg:text-left`}>
-          Create Account
+          Login Account
         </Heading>
         <div className="space-y-5 mt-5">
-          <Phone />
+         
+            <div className="flex flex-col gap-4">
+                 <InputField
+            className={`w-full lg:w-[24rem] border-2 border-grayColor p-2`}
+            placeHolder={`Phone Number / Email Address`}
+            hasIcon={!1}
+            
+          />
           <InputField
-            className={`w-full lg:w-[24rem] border-2 border-grayColor p-2 lg:top-[14%]`}
+            className={`w-full lg:w-[24rem] border-2 border-grayColor p-2 lg:top-[21.5%]`}
             placeHolder={`Password`}
             hasIcon={!0}
             icon={EyeLash}
           />
-          <Text className={`text-center w-[24rem]`}>
-            Use at least 8 characters -1 uppercase letter, 1 number and 1 symbol
+            </div>
+          <Text className={`text-center lg:text-right w-[24rem]`}>
+           Fogot Password?
           </Text>
           <Button filled className={`w-full lg:w-[24rem] `}>
             Sign Up
           </Button>
-          <Text className={`text-center w-[24rem]`}>
+          <Text className={`text-center  w-[24rem]`}>
             Already registered? Log in
           </Text>
           <ReCapture />
@@ -47,4 +56,4 @@ const Register = ({ className }) => {
   )
 }
 
-export default Register
+export default Login
