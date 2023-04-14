@@ -13,9 +13,9 @@ export default function Home() {
       {/* <AuthSidebar /> */}
       {/* <AuthSidebar2/> */}
       {/* <Register/> */}
-      <Signup />
+      {/* <Signup /> */}
       {/* <Login/> */}
-      {/* <Signin/> */}
+      <Signin/>
     </main>
   )
 }
