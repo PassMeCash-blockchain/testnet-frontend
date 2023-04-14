@@ -45,7 +45,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <Button filled className="md:w-full w-[96%] mt-5">
+            <Button filled className="md:w-full w-[95%] mt-5">
               Reset password
             </Button>
           </div>

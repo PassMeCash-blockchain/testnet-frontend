@@ -4,6 +4,7 @@ import Text from "../atoms/Text";
 export default function Layout({ children }) {
   return (
     <div className="grid lg:grid-cols-3 grid-cols-1">
+      {/* Form field */}
       <div className="md:h-[100vh] h-[30vh] bg-white">{children}</div>
 
       {/* Image */}
