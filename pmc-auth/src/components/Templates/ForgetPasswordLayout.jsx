@@ -3,11 +3,9 @@ import Text from "../atoms/Text";
 
 export default function Layout({ children }) {
   return (
-    <div className="grid lg:grid-cols-3 grid-cols-1">
+    <div className="grid lg:grid-cols-3 grid-cols-1 h-[100%]">
       {/* Form field */}
-      <div className="md:h-[100vh] h-[30vh] bg-white">
-        <div className="md:py-40 py-20 px-8 space-y-10">{children}</div>
-      </div>
+      <div className="md:h-[100vh] h-[30vh] bg-white">{children}</div>
 
       {/* Image */}
       <div className="relative h-full col-span-2 bg-[#F2ECFE] md:grid hidden place-items-center">

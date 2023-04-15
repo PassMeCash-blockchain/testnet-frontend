@@ -2,6 +2,7 @@ import React from "react";
 import { Images } from "./libraries";
 
 const InputField = ({
+  focus,
   onChange,
   className,
   type,
@@ -14,7 +15,7 @@ const InputField = ({
       <input
         type={type}
         placeholder={placeHolder}
-        className={`${className} bg-none rounded-md static`}
+        className={className}
         onChange={onChange}
       />
       {!!hasIcon && (
