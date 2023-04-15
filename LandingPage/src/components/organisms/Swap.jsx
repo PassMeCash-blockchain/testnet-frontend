@@ -1,18 +1,11 @@
 import InputField from "../atoms/InputField";
 import Text from "../atoms/Text";
 import Button from "../atoms/Button";
-
-import { clients, gqls } from '../atoms/libraries';
-
+import { clients, gqls } from "../atoms/libraries";
 import Image from "next/image";
 import SectionSpacing from "../templates/SectionSpacing";
-import { clients } from "../components/atoms/libraries";
-import { gqls } from "../components/atoms/libraries";
 
-
-export async function fetchData() {
-
-}
+export async function fetchData() {}
 
 const Swap = () => {
   return (
@@ -20,13 +13,13 @@ const Swap = () => {
       <div className="grid md:grid-cols-[3fr_2fr] gap-20 container mx-auto lg:max-w-4xl">
         {/* Content */}
         <div>
-            <Text className="font-semibold text-4xl text-[#0B011D]">
-              Exchange crypto for cash quickly at a good rate.
-            </Text>
-            <Text className="mt-6 text-[#0B011D]">
-              Quickly convert dozens of cryptocurrencies into your specific
-              currency.
-            </Text>
+          <Text className="font-semibold text-4xl text-[#0B011D]">
+            Exchange crypto for cash quickly at a good rate.
+          </Text>
+          <Text className="mt-6 text-[#0B011D]">
+            Quickly convert dozens of cryptocurrencies into your specific
+            currency.
+          </Text>
           <div className="mt-12 w-full mb-5 grid gap-4 grid-cols-3">
             <InputField
               type="text"

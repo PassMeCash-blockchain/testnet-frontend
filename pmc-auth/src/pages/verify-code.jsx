@@ -1,5 +1,5 @@
 import Image from "next/image";
-import InputField from "@/components/atoms/InputField";
+import InputField from "@/components/atoms/Inputs";
 import Text from "@/components/atoms/Text";
 import Button from "@/components/atoms/Button";
 

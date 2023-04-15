@@ -1,12 +1,12 @@
-import { Heading } from '../atoms/Heading'
-import InputField from './../atoms/InputField'
-import { Images } from '../atoms/libraries'
-import PassMeCash from '../../../public/assets/PassMeCash-Logo.png'
-import Phone from '../molecules/phone'
-import EyeLash from '../../../public/assets/EyeSlash.png'
-import Text from '../atoms/Text'
-import Button from '../atoms/Button'
-import { ReCapture } from '../molecules/reCapture'
+import { Heading } from "../atoms/Heading";
+import InputField from "../atoms/Inputs";
+import { Images } from "../atoms/libraries";
+import PassMeCash from "../../../public/assets/PassMeCash-Logo.png";
+import Phone from "../molecules/phone";
+import EyeLash from "../../../public/assets/EyeSlash.png";
+import Text from "../atoms/Text";
+import Button from "../atoms/Button";
+import { ReCapture } from "../molecules/reCapture";
 const Register = ({ className }) => {
   return (
     <div className={`${className} w-full`}>
@@ -38,13 +38,13 @@ const Register = ({ className }) => {
           <ReCapture />
           <Text className={`text-center w-[24rem]`}>
             By signing up I agree to the <b>Terms of Use</b>, and consent to the
-            processing of my personal and biometric data as stated in the{' '}
+            processing of my personal and biometric data as stated in the{" "}
             <b>Privacy Policy.</b>
           </Text>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;
