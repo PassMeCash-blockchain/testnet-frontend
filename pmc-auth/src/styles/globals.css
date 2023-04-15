@@ -2,4 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
+input[type="text"]:focus ~ .input-text,
+input[type="text"]:not(:placeholder-shown) ~ .input-text {
+  @apply text-black transform -translate-y-7 -translate-x-2 scale-75;
+}

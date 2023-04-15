@@ -6,13 +6,16 @@ import Button from "@/components/atoms/Button";
 
 export default function createNewPassword() {
   const inputId = [
-    { id: 1, placeholder: "password", type: "password" },
-    { id: 2, placeholder: "Re-enter password", type: "password" },
+    { id: 1, type: "text", placeholder: "Legal first Name" },
+    { id: 2, type: "text", placeholder: "Legal Last Name" },
+    { id: 3, type: "text", placeholder: "Birthday" },
+    { id: 4, type: "text", placeholder: "Email" },
   ];
   return (
     <Layout>
       {/* Logo */}
-      <div className="md:pt-32 py-20 px-8 space-y-10">
+
+      <div className="py-10 px-8 space-y-10">
         <Image
           src={"/assets/PassMeCash-Logo.png"}
           alt="PMC Logo"
@@ -24,10 +27,11 @@ export default function createNewPassword() {
         {/* text */}
         <div className="tracking-[0.015em] text-black leading-[140%]">
           <Text className="not-italic font-semibold text-2xl">
-            Create new password
+            Personal Information
           </Text>
           <Text className="font-normal lg:text-base text-sm text-[#0B011D]">
-            Type in a password that meets all the requirements.
+            Please fill in your information to make sure your application goes
+            smoothly.
           </Text>
         </div>
 
@@ -52,25 +56,10 @@ export default function createNewPassword() {
                 </label>
               </div>
             ))}
-            <Text className="font-normal text-xs text-[#0B011D] tracking-[#0B011D]">
-              Password must be a mix of one uppercase letter and one symbol
-            </Text>
           </div>
           <Button filled className="w-full mt-5">
-            Reset password
+            Next
           </Button>
-        </div>
-
-        <div className="flex space-x-1">
-          <Image
-            src={"/SVG/ArrowLeft.svg"}
-            width={20}
-            height={20}
-            alt="back arrow"
-          />
-          <Text className="font-medium text-base leading-[140%] tracking-[0.015em] ">
-            Back to login
-          </Text>
         </div>
       </div>
     </Layout>
