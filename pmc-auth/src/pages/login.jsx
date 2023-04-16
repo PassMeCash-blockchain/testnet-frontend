@@ -1,16 +1,11 @@
 import PageLayout from "@/components/Templates/PageLayout";
 import Inputs from "@/components/atoms/Inputs";
+import { useEffect, useState } from "react";
 
 const login = () => {
-  const options = [
-    "Favorite pet?",
-    "Favorite pet?",
-    "Favorite pet?",
-    "Favorite pet?",
-    "Favorite pet?",
-    "Favorite pet?",
-    "Favorite pet?",
-  ];
+  const [pass, setpass] = useState("");
+
+  useEffect(() => console.log(pass), [pass]);
   return (
     <PageLayout
       img="/assets/background-bg-wallet.png"
@@ -20,7 +15,12 @@ const login = () => {
       <form action="">
         <h1>This is the form</h1>
         <div className="mt-5">
-          <Inputs label="select" type="select" options={options} />
+          <Inputs
+            label="Password"
+            type="text"
+            value={pass}
+            setValueFn={setpass}
+          />
         </div>
       </form>
     </PageLayout>

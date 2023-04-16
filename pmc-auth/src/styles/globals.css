@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer {
+  input::-ms-reveal {
+    display: none;
+  }
+
+  .customized-date-input::-webkit-calendar-picker-indicator {
+    background-image: url("/svg/date-icon.svg");
+    background-size: 150%;
+    background-position: -5px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
