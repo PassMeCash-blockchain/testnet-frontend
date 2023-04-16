@@ -2,9 +2,33 @@ import Link from "next/link";
 import Button from "../atoms/Button";
 import SectionSpacing from "../templates/SectionSpacing";
 import Image from "next/image";
+import { clients, gqls } from '../atoms/libraries';
 // import { useState } from "react";
 
-const Header = () => {
+export async function fetchData() {
+  const {data: headerData} = await clients.query({
+    query: gqls`
+    query MyQuery {
+      headerSection(where: {id: "clg7sui9o10mg0alep6las9b5"}) {
+        buttons
+        navCrypto
+        navWwd
+        headerLogo {
+          url
+        }
+      }
+    }
+    `,
+   });
+ const allHeaderData = headerData.headerSection;
+ return {
+  allHeaderData
+};
+}
+
+
+const Header = async () => {
+  const res = await fetchData()
   //   const [dropdownOpen, setdropdownOpen] = useState(false);
   return (
     <SectionSpacing>

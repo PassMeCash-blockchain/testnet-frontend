@@ -3,3 +3,6 @@
 @tailwind utilities;
 
 
+.Active {
+    @apply bg-white rounded-md px-2 py-3 text-black w-[12rem]
+}
