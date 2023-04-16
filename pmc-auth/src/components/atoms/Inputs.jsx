@@ -44,8 +44,8 @@ const Inputs = ({ label, type, options, value, setValueFn }) => {
             {/* Label */}
             <span
               className={clsx(
-                "absolute z-10 left-3 leading-[12px] scale text-[#777] bg-[#FCFCFC] -translate-y-1/2 text-lg px-0 transition-all",
-                isFocus ? "-top-[2px] px-2 scale-75" : "top-1/2"
+                "absolute z-10 left-3 leading-[12px] scale text-[#777] bg-[#FCFCFC] -translate-y-1/2 px-0 transition-all",
+                isFocus ? "-top-[2px] px-2 text-sm" : "top-1/2 text-lg"
               )}
             >
               {label}
