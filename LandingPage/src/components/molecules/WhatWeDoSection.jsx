@@ -36,7 +36,7 @@ const WhatWeDoSection = async () => {
       </Heading>
       <data />
       <Heading level={1} className="">
-        Learn More About Us
+        {res.allWhatWeDoData.wwdTitleBig}
       </Heading>
       <Text className={`text-[16px] w-[400px]`}>
         {res.allWhatWeDoData.wwdDescription}

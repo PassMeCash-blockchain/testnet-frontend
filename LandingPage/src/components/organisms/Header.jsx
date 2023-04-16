@@ -10,9 +10,24 @@ export async function fetchData() {
     query: gqls`
     query MyQuery {
       headerSection(where: {id: "clg7sui9o10mg0alep6las9b5"}) {
-        buttons
+        btnFilled
+        btnFilledLink
+        btnOutline
+        btnOutlineLink
+        c1
+        c1Link
+        c2
+        c2Link
         navCrypto
+        navFaq
+        navServices
         navWwd
+        os1
+        os1Link
+        os2
+        os2Link
+        os3
+        os3Link
         headerLogo {
           url
         }
@@ -36,7 +51,7 @@ const Header = async () => {
         <div className="flex gap-8">
           <div className="w-[66px] h-[36px]">
             <Image
-              src="/assets/PassMeCash -Logo 1.png"
+              src={res.allHeaderData.headerLogo.url}
               width={5000}
               height={5000}
               alt="logo"
@@ -44,7 +59,7 @@ const Header = async () => {
           </div>
           <div className="text-inactiveColor items-center space-x-8 flex">
             <div className="flex gap-1">
-              <Link href="">Crypto</Link>
+              <Link href="">{res.allHeaderData.navCrypto}</Link>
               <Image
                 src="/assets/icons/drop-down.svg"
                 width={10}
@@ -53,9 +68,9 @@ const Header = async () => {
               />
             </div>
 
-            <Link href="">What we do</Link>
+            <Link href="">{res.allHeaderData.navWwd}</Link>
             <div className="flex gap-1">
-              <Link href="">Our Services</Link>
+              <Link href="">{res.allHeaderData.navServices}</Link>
               <Image
                 src="/assets/icons/drop-down.svg"
                 width={10}
@@ -63,12 +78,12 @@ const Header = async () => {
                 alt="logo"
               />
             </div>
-            <Link href="">FAQ</Link>
+            <Link href="">{res.allHeaderData.navFaq}</Link>
           </div>
         </div>
         <div className="flex display-end items-center gap-8">
-          <Button>Login</Button>
-          <Button filled>Sign up</Button>
+          <Button>{res.allHeaderData.btnOutline}</Button>
+          <Button filled>{res.allHeaderData.btnFilled}</Button>
         </div>
       </div>
     </SectionSpacing>
