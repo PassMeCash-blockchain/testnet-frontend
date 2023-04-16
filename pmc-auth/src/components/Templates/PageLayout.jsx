@@ -2,12 +2,17 @@ import SideBackground from "../molecules/SideBackground";
 
 const PageLayout = ({ img, title, text, children: form }) => {
   return (
-    <div className="grid grid-cols-[500px_1fr] h-screen bg-[#FCFCFC]">
+    <div className="grid h-screen bg-[#FCFCFC] md:grid-cols-[auto_1fr]">
       {/* Form */}
-      {form}
+      <div className="max-w-[540px] w-full h-full mx-auto">{form}</div>
 
       {/* Side Background */}
-      <SideBackground img={img} title={title} text={text} />
+      <SideBackground
+        img={img}
+        title={title}
+        text={text}
+        className="hidden md:grid"
+      />
     </div>
   );
 };
