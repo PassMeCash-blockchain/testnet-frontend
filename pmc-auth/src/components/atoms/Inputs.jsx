@@ -155,6 +155,14 @@ const Inputs = ({ label, type, options, value, setValueFn }) => {
         </label>
       );
 
+    case "otp":
+      return (
+        <input
+          type="number"
+          className="border border-[#B3B3B3] rounded-[4px] w-10 h-10 text-center text-3xl outline-[#874CF6] md:w-20 md:h-20"
+        />
+      );
+
     default:
       return (
         <label className="border block border-[#ABA6A6] relative rounded-md">
