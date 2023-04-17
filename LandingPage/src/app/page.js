@@ -7,20 +7,18 @@ import { clients } from "../components/atoms/libraries";
 import { gqls } from "../components/atoms/libraries";
 
 export async function fetchData() {
-    
-   
-   const {data: partnerData} = await clients.query({
-      query: gqls`
+  const { data: partnerData } = await clients.query({
+    query: gqls`
       query MyQuery {
   partner(where: {id: "clg6qdoco0mhk0bljxxz9c82j"}) {
     partner
   }
 }
       `,
-   });
+  });
 
-   const {data: calculatorData} = await clients.query({
-      query: gqls`
+  const { data: calculatorData } = await clients.query({
+    query: gqls`
       query MyQuery {
   calculatorSection(where: {id: "clg7trcgs10ju0bk69hykwjmk"}) {
     calculatorBtn
@@ -34,14 +32,14 @@ export async function fetchData() {
   }
 }
       `,
-   });
-   const {allPartnerData} = partnerData;
-   const {allCalculatorData} = calculatorData.calculatorSection;
-    return {
-         allPartnerData,
-         allCalculatorData
-    };
-   }
+  });
+  const { allPartnerData } = partnerData;
+  const { allCalculatorData } = calculatorData.calculatorSection;
+  return {
+    allPartnerData,
+    allCalculatorData,
+  };
+}
 
 const archivo = Archivo({ subsets: ["latin"] });
 import TextSlider from "@/components/organisms/TextSlider";
@@ -50,15 +48,15 @@ import Header from "@/components/organisms/Header";
 import Hero from "@/components/organisms/Hero";
 
 export default async function Home() {
-  const res = await fetchData()
+  const res = await fetchData();
   return (
     <main className={archivo.className}>
       <Header />
-      <Hero />
+      {/* <Hero /> */}
       {/* <TextSlider /> */}
       {/* <Swap /> */}
-      <Services />
-      <WhatWeDo />
+      {/* <Services /> */}
+      {/* <WhatWeDo /> */}
     </main>
   );
 }
