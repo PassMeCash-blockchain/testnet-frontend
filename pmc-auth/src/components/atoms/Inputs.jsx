@@ -103,7 +103,7 @@ const Inputs = ({ label, type, options, value, setValueFn }) => {
           {/* Label */}
           <span
             className={clsx(
-              "absolute z-10 left-3 leading-[12px] scale text-[#777] bg-[#FCFCFC] top-1/2 -translate-y-1/2 text-lg px-0 transition-all",
+              "absolute z-10 left-3 leading-[12px] text-[#777] bg-[#FCFCFC] top-1/2 -translate-y-1/2 text-lg px-0 transition-all",
               isDropDown && "-top-[2px] px-2",
               value !== "" && "-top-[2px] px-2"
             )}
@@ -112,7 +112,7 @@ const Inputs = ({ label, type, options, value, setValueFn }) => {
           </span>
           {/* DropDown */}
           {isDropDown && (
-            <div className="absolute top-12 left-0 w-full grid gap-2 p-3 rounded-md shadow-[0_0_5px_1px_rgba(0,0,0,0.1)]">
+            <div className="absolute bg-white z-10 top-14 left-0 w-full grid gap-2 p-3 rounded-md shadow-[0_0_5px_1px_rgba(0,0,0,0.1)]">
               {options?.map((option, i) => (
                 <p
                   className="cursor-pointer "

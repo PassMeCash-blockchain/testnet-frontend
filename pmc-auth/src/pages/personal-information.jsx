@@ -2,7 +2,7 @@ import PageLayout from "@/components/Templates/PageLayout";
 import Logo from "@/components/atoms/Logo";
 import PersonalInformationForm from "@/components/molecules/PersonalInformationForm";
 
-export default function createNewPassword() {
+const PersonalInformation = () => {
   return (
     <PageLayout
       img="/assets/background-bg-girl.png"
@@ -15,4 +15,6 @@ export default function createNewPassword() {
       </div>
     </PageLayout>
   );
-}
+};
+
+export default PersonalInformation;

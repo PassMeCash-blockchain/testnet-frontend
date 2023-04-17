@@ -11,10 +11,7 @@ const CreateAccount = () => {
       title="Exchange Crypto for Cash"
       text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat tellus vitae aliquam nisl, habitant auctor praesent."
     >
-      <div className="p-8 h-full grid grid-rows-[auto_1fr] md:p-16">
-        <Logo className="mx-auto" />
-        <CreateAccountForm />
-      </div>
+      <CreateAccountForm />
     </PageLayout>
   );
 };

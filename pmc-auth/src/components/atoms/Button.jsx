@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import React from "react";
+import { BsArrowLeft } from "react-icons/bs";
 
 const Button = ({ filled, className, children }) => {
   return (
@@ -11,6 +12,15 @@ const Button = ({ filled, className, children }) => {
       )}
     >
       {children}
+    </button>
+  );
+};
+
+export const BackToLogin = () => {
+  return (
+    <button className="grid grid-cols-[auto_1fr] items-center gap-2 mt-5 font-medium">
+      <BsArrowLeft />
+      Back to login
     </button>
   );
 };

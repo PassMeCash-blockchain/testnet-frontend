@@ -4,7 +4,7 @@ import Inputs from "../atoms/Inputs";
 const VerificationForm = () => {
   const numberOFInputOTP = 6;
   return (
-    <div className="grid gap-6">
+    <form className="grid gap-6">
       <h2 className="text-center text-xl font-medium">
         Verify Your Phone Number
       </h2>
@@ -28,7 +28,7 @@ const VerificationForm = () => {
       <Button filled className="w-full max-w-md mx-auto mt-20 block">
         Verify
       </Button>
-    </div>
+    </form>
   );
 };
 

@@ -1,13 +1,13 @@
 import Inputs from "../atoms/Inputs";
 import Button from "../atoms/Button";
 
-const PersonalInformationForm = () => {
+const ContactInformationForm = () => {
   return (
     <form className="grid grid-rows-[auto_1fr_auto] items-start sm:block">
       {/* Description */}
       <div>
         <h2 className="text-xl font-semibold text-[#0B011D] text-center md:text-2xl">
-          Personal Information
+          Contact Information
         </h2>
         <p className="text-[#0B011D] text-center mt-6">
           Please fill in your information to make sure your application goes
@@ -17,10 +17,10 @@ const PersonalInformationForm = () => {
 
       {/* Inputs */}
       <div className="grid gap-5 mt-10">
-        <Inputs type="text" label="Legal First Name" />
-        <Inputs type="text" label="Legal Last Name" />
-        <Inputs type="date" label="Birthday" />
-        <Inputs type="email" label="Email" />
+        <Inputs type="select" label="State" />
+        <Inputs type="select" label="LGA" />
+        <Inputs type="text" label="Address1" />
+        <Inputs type="text" label="Address2" />
       </div>
 
       <Button filled className="w-full mt-10">
@@ -30,4 +30,4 @@ const PersonalInformationForm = () => {
   );
 };
 
-export default PersonalInformationForm;
+export default ContactInformationForm;
