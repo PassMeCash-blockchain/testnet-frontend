@@ -44,8 +44,8 @@ const Inputs = ({ label, type, options, value, setValueFn }) => {
             {/* Label */}
             <span
               className={clsx(
-                "absolute z-10 left-3 leading-[12px] scale text-[#777] bg-[#FCFCFC] -translate-y-1/2 text-lg px-0 transition-all",
-                isFocus ? "-top-[2px] px-2 scale-75" : "top-1/2"
+                "absolute z-10 left-3 leading-[12px] scale text-[#777] bg-[#FCFCFC] -translate-y-1/2 px-0 transition-all",
+                isFocus ? "-top-[2px] px-2 text-sm" : "top-1/2 text-lg"
               )}
             >
               {label}
@@ -103,7 +103,7 @@ const Inputs = ({ label, type, options, value, setValueFn }) => {
           {/* Label */}
           <span
             className={clsx(
-              "absolute z-10 left-3 leading-[12px] scale text-[#777] bg-[#FCFCFC] top-1/2 -translate-y-1/2 text-lg px-0 transition-all",
+              "absolute z-10 left-3 leading-[12px] text-[#777] bg-[#FCFCFC] top-1/2 -translate-y-1/2 text-lg px-0 transition-all",
               isDropDown && "-top-[2px] px-2",
               value !== "" && "-top-[2px] px-2"
             )}
@@ -112,7 +112,8 @@ const Inputs = ({ label, type, options, value, setValueFn }) => {
           </span>
           {/* DropDown */}
           {isDropDown && (
-            <div className="absolute top-12 left-0 w-full grid gap-2 p-3 rounded-md shadow-[0_0_5px_1px_rgba(0,0,0,0.1)]">
+            <div className="absolute bg-white z-50 top-14 left-0 w-full grid gap-2 p-3 rounded-md shadow-[0_0_5px_1px_rgba(0,0,0,0.1)]">
+              <p>hi</p>
               {options?.map((option, i) => (
                 <p
                   className="cursor-pointer "
@@ -153,6 +154,14 @@ const Inputs = ({ label, type, options, value, setValueFn }) => {
             <span className="absolute bg-[#FCFCFC] w-40 h-full left-1 top-0 "></span>
           )}
         </label>
+      );
+
+    case "otp":
+      return (
+        <input
+          type="number"
+          className="border border-[#B3B3B3] rounded-[4px] w-10 h-10 text-center text-3xl outline-[#874CF6] md:w-20 md:h-20"
+        />
       );
 
     default:

@@ -2,15 +2,13 @@ import Link from "next/link";
 import Button from "../atoms/Button";
 import SectionSpacing from "../templates/SectionSpacing";
 import Image from "next/image";
-import { clients, gqls } from '../atoms/libraries';
-// import { useState } from "react";
+import { clients, gqls } from "../atoms/libraries";
 
 export async function fetchData() {
-  const {data: headerData} = await clients.query({
+  const { data: headerData } = await clients.query({
     query: gqls`
     query MyQuery {
       headerSection(where: {id: "clg7sui9o10mg0alep6las9b5"}) {
-        buttons
         navCrypto
         navWwd
         headerLogo {
@@ -19,17 +17,17 @@ export async function fetchData() {
       }
     }
     `,
-   });
- const allHeaderData = headerData.headerSection;
- return {
-  allHeaderData
-};
+  });
+  const allHeaderData = headerData.headerSection;
+  console.log(allHeaderData);
+  return {
+    allHeaderData,
+  };
 }
 
-
 const Header = async () => {
-  const res = await fetchData()
-  //   const [dropdownOpen, setdropdownOpen] = useState(false);
+  const res = await fetchData();
+
   return (
     <SectionSpacing>
       <div className="grid grid-cols-2 font-medium text-base items-center">

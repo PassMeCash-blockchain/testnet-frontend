@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer {
+@layer base {
   input::-ms-reveal {
     display: none;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
   }
 
   .customized-date-input::-webkit-calendar-picker-indicator {
@@ -13,5 +23,11 @@
     background-position: -5px;
     background-repeat: no-repeat;
     cursor: pointer;
+  }
+}
+
+@layer components {
+  .page-spacing-x {
+    @apply px-4 md:px-8;
   }
 }
