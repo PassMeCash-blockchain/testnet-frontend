@@ -112,7 +112,8 @@ const Inputs = ({ label, type, options, value, setValueFn }) => {
           </span>
           {/* DropDown */}
           {isDropDown && (
-            <div className="absolute bg-white z-10 top-14 left-0 w-full grid gap-2 p-3 rounded-md shadow-[0_0_5px_1px_rgba(0,0,0,0.1)]">
+            <div className="absolute bg-white z-50 top-14 left-0 w-full grid gap-2 p-3 rounded-md shadow-[0_0_5px_1px_rgba(0,0,0,0.1)]">
+              <p>hi</p>
               {options?.map((option, i) => (
                 <p
                   className="cursor-pointer "
