@@ -10,9 +10,6 @@ const archivo = Archivo({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main>
-      {/* <ButtonRequest />
-      <Sidebar /> */}
-      {/* <Cards type="crypto_balance" /> */}
       <TransactionList type="occupied" />
     </main>
   );
