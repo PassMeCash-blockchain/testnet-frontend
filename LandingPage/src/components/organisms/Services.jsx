@@ -1,7 +1,47 @@
 import SectionSpacing from "../templates/SectionSpacing";
 import ServiecesSection from "../templates/ServiecesSection";
 
-const Services = () => {
+
+export async function fetchData() {
+  const {data: servicesData} = await clients.query({
+    query: gqls`
+    query MyQuery {
+      serviceSection(where: {id: "clgq8s6ai66ua0bjvfughxume"}) {
+        s1Btn
+        s1BtnLink
+        s1Description
+        s1Title
+        s2Btn
+        s2BtnLink
+        s2Description
+        s2Title
+        s3Btn
+        s3BtnLink
+        s3Description
+        s3Title
+        s3Image {
+          url
+        }
+        s2Image {
+          url
+        }
+        s1Image {
+          url
+        }
+      }
+    }    
+    `,
+  });
+  const allServicesData = servicesData.serviceSection;
+  return {
+    allServicesData
+  };
+}
+
+
+const Services = async () => {
+  const res = await fetchData()
+
   const schema = {
     header: "Our Services",
     sections: [
