@@ -4,21 +4,46 @@ import Button from "../atoms/Button";
 import { clients, gqls } from "../atoms/libraries";
 import Image from "next/image";
 import SectionSpacing from "../templates/SectionSpacing";
+import { clients, gqls } from '../atoms/libraries';
 
-export async function fetchData() {}
 
-const Swap = () => {
+export async function fetchData() {
+  const {data: swapData} = await clients.query({
+    query: gqls`
+    query MyQuery {
+      calculatorSection(where: {id: "clg7trcgs10ju0bk69hykwjmk"}) {
+        calculatorBtn
+        calculatorTextBig
+        calculatorTextSmall
+        option1
+        option2
+        option3
+        option4
+        calculatorImage {
+          url
+        }
+      }
+    }
+    `,
+   });
+ const allSwapData = swapData.calculatorSection;
+ return {
+  allSwapData
+};
+}
+
+const Swap = async () => {
+  const res = await fetchData();
   return (
     <SectionSpacing>
       <div className="grid md:grid-cols-[3fr_2fr] gap-20 container mx-auto lg:max-w-4xl">
         {/* Content */}
         <div>
           <Text className="font-semibold text-4xl text-[#0B011D]">
-            Exchange crypto for cash quickly at a good rate.
+          {res.allSwapData.calculatorTextBig}
           </Text>
           <Text className="mt-6 text-[#0B011D]">
-            Quickly convert dozens of cryptocurrencies into your specific
-            currency.
+          {res.allSwapData.calculatorTextSmall}
           </Text>
           <div className="mt-12 w-full mb-5 grid gap-4 grid-cols-3">
             <InputField
@@ -27,9 +52,9 @@ const Swap = () => {
               placeholder="Amount |"
             />
             <select className="w-full justify-self-start text-center rounded-md bg-[#F0F0F0]">
-              <option value="volvo">USDT</option>
-              <option value="saab">STR</option>
-              <option value="fiat">STR</option>
+              <option value="volvo">{res.allSwapData.option1}</option>
+              <option value="saab">{res.allSwapData.option2}</option>
+              <option value="fiat">{res.allSwapData.option3}</option>
             </select>
             <InputField
               type="text"
@@ -37,19 +62,19 @@ const Swap = () => {
               placeholder="Convert | 12787799.68"
             />
             <select className="w-full text-center rounded-md bg-[#F0F0F0]">
-              <option value="volvo">NGN</option>
-              <option value="saab">STR</option>
-              <option value="fiat">STR</option>
+              <option value="volvo">{res.allSwapData.option4}</option>
+              <option value="saab">{res.allSwapData.option1}</option>
+              <option value="fiat">{res.allSwapData.option2}</option>
             </select>
           </div>
           <Button filled className="w-full">
-            Exchange now
+          {res.allSwapData.calculatorBtn}
           </Button>
         </div>
 
         {/* Illustration */}
         <div className="relative">
-          <Image src="/assets/rocket.svg" fill alt="Illustration" />
+          <Image src={res.allSwapData.calculatorImage.url} fill alt="Illustration" />
         </div>
       </div>
     </SectionSpacing>
