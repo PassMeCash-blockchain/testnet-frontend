@@ -4,11 +4,9 @@ import Button from "../atoms/Button";
 import { clients, gqls } from "../atoms/libraries";
 import Image from "next/image";
 import SectionSpacing from "../templates/SectionSpacing";
-import { clients, gqls } from '../atoms/libraries';
-
 
 export async function fetchData() {
-  const {data: swapData} = await clients.query({
+  const { data: swapData } = await clients.query({
     query: gqls`
     query MyQuery {
       calculatorSection(where: {id: "clg7trcgs10ju0bk69hykwjmk"}) {
@@ -25,11 +23,11 @@ export async function fetchData() {
       }
     }
     `,
-   });
- const allSwapData = swapData.calculatorSection;
- return {
-  allSwapData
-};
+  });
+  const allSwapData = swapData.calculatorSection;
+  return {
+    allSwapData,
+  };
 }
 
 const Swap = async () => {
@@ -40,10 +38,10 @@ const Swap = async () => {
         {/* Content */}
         <div>
           <Text className="font-semibold text-4xl text-[#0B011D]">
-          {res.allSwapData.calculatorTextBig}
+            {res.allSwapData.calculatorTextBig}
           </Text>
           <Text className="mt-6 text-[#0B011D]">
-          {res.allSwapData.calculatorTextSmall}
+            {res.allSwapData.calculatorTextSmall}
           </Text>
           <div className="mt-12 w-full mb-5 grid gap-4 grid-cols-3">
             <InputField
@@ -68,13 +66,17 @@ const Swap = async () => {
             </select>
           </div>
           <Button filled className="w-full">
-          {res.allSwapData.calculatorBtn}
+            {res.allSwapData.calculatorBtn}
           </Button>
         </div>
 
         {/* Illustration */}
         <div className="relative">
-          <Image src={res.allSwapData.calculatorImage.url} fill alt="Illustration" />
+          <Image
+            src={res.allSwapData.calculatorImage.url}
+            fill
+            alt="Illustration"
+          />
         </div>
       </div>
     </SectionSpacing>
