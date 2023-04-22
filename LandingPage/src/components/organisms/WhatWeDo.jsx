@@ -26,8 +26,8 @@ whatWeDoSection(where: {id: "clg7scrao0zyc0bk6wr1ybxk8"}) {
   };
 }
 const WhatWeDo = async () => {
-  console.log(res.allWhatWeDoData.wwdImage.url)
   const res = await fetchData();
+  console.log(res.allWhatWeDoData.wwdImage.url);
   return (
     <SectionSpacing>
       <div className="grid gap-20 items-center container mx-auto md:grid-cols-[2fr_3fr] lg:max-w-4xl">
@@ -35,10 +35,9 @@ const WhatWeDo = async () => {
         <div className="relative w-full h-[501px] hidden md:flex">
           <Images
             className="hidden md:flex"
-            src="/assets/rocketboy.svg"
+            src={res.allWhatWeDoData.wwdImage.url}
             fill
             alt="Illustration"
-
           />
         </div>
 
@@ -51,7 +50,7 @@ const WhatWeDo = async () => {
             {res.allWhatWeDoData.wwdTitle}
           </h3>
           <Text className="text-[16px] mt-4 text-center md:text-left">
-              {res.allWhatWeDoData.wwdDescription}
+            {res.allWhatWeDoData.wwdDescription}
           </Text>
           <Button className="w-full bg-primaryColor text-white px-2 py-2 mt-8">
             {res.allWhatWeDoData.wwdBtn}

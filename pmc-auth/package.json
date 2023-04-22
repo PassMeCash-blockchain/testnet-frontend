@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.11",
+<<<<<<< HEAD
+=======
+    "@reduxjs/toolkit": "^1.9.3",
+>>>>>>> origin/main
     "autoprefixer": "10.4.14",
     "clsx": "^1.2.1",
     "eslint": "8.37.0",

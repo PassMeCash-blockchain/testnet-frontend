@@ -1,29 +1,30 @@
 import Button from "../atoms/Button";
 import Inputs from "../atoms/Inputs";
 
-const LoginForm = () => {
+const CreateAccountForm = () => {
   return (
     <form action="" className="grid grid-rows-[1fr_auto]">
       <div>
-<<<<<<< HEAD
-        <h2 className="text-2xl text-center font-semibold mt-8 ">
-          Login Account
-        </h2>
-        <p className="mt-4 text-center">
-=======
         <h2 className="text-2xl text-center font-semibold mt-10 md:text-left">
-          Login Account
+          Create Account
         </h2>
-        <p className="mt-4 text-center md:text-left">
->>>>>>> origin/main
-          Don’t have an account? <span className="font-semibold">Sign up</span>
-        </p>
 
         <div className="mt-8 grid gap-7">
-          <Inputs type="text" label="Email or Phone Number" />
+          <Inputs type="phone" label="Phone Number" />
           <Inputs type="password" label="Password" />
         </div>
-        <p className="w-max ml-auto mt-4">Forgot Password?</p>
+        <p className="text-xs mt-4">
+          Use at least 8 characters -1 uppercase letter, 1 number and 1 symbol
+        </p>
+
+        <Button filled className="w-full mt-10">
+          Sign up
+        </Button>
+
+        <p className="mt-5 text-center">
+          Already registered? <span className="font-semibold">Log in</span>
+        </p>
+
         <p className="text-center mt-8">
           By signing up I agree to the{" "}
           <span className="font-semibold underline">Terms of Use</span>, and
@@ -32,12 +33,8 @@ const LoginForm = () => {
           .
         </p>
       </div>
-
-      <Button filled className="w-full">
-        Log In
-      </Button>
     </form>
   );
 };
 
-export default LoginForm;
+export default CreateAccountForm;
