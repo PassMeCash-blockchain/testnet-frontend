@@ -1,11 +1,8 @@
-import SectionSpacing from "../templates/SectionSpacing";
 import ServiecesSection from "../templates/ServiecesSection";
-import { clients, gqls } from '../atoms/libraries';
-
-
+import { clients, gqls } from "../atoms/libraries";
 
 export async function fetchData() {
-  const {data: servicesData} = await clients.query({
+  const { data: servicesData } = await clients.query({
     query: gqls`
     query MyQuery {
       serviceSection(where: {id: "clgq8s6ai66ua0bjvfughxume"}) {
@@ -40,7 +37,6 @@ export async function fetchData() {
     allServicesData,
   };
 }
-
 
 const Services = async () => {
   const res = await fetchData();

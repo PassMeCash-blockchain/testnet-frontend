@@ -4,7 +4,7 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import client from "../../apolloClient";
 
 export const Images = Image;
-export const clsxes = clsx;
+export const conditionalClass = clsx;
 export const ApolloClients = ApolloClient;
 export const InMemoryCaches = InMemoryCache;
 export const gqls = gql;

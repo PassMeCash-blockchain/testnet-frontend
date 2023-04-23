@@ -3,7 +3,6 @@ import Text from "../atoms/Text";
 import Button from "../atoms/Button";
 import { clients, gqls } from "../atoms/libraries";
 import Image from "next/image";
-import SectionSpacing from "../templates/SectionSpacing";
 
 export async function fetchData() {
   const { data: swapData } = await clients.query({
