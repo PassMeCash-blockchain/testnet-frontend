@@ -21,7 +21,7 @@ const WhatWeDo = async () => {
         <h2 className="relative text-2xl text-center before:w-36 before:left-1/2 before:-translate-x-1/2 before:h-[3px] before:absolute before:bg-[#E5D8FD] before:-bottom-1 md:text-lg md:text-left md:before:w-24 md:before:left-0 md:before:translate-x-0">
           What we do
         </h2>
-        <h3 className="font-semibold text-4xl mt-8 text-center md:text-left">
+        <h3 className="font-semibold text-3xl mt-8 text-center md:text-left md:text-4xl">
           Learn More About Us
         </h3>
         <Text className="text-[16px] mt-4 text-center md:text-left">

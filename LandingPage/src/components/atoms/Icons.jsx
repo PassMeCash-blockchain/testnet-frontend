@@ -1,6 +1,6 @@
 import { AiFillInstagram, AiOutlineCloseCircle } from "react-icons/ai";
 import { BsCaretDownFill } from "react-icons/bs";
-import { HiChevronDown, HiOutlinePlus, HiMenu } from "react-icons/hi";
+import { HiChevronDown, HiOutlinePlus, HiMenu, HiMinus } from "react-icons/hi";
 import { ImFacebook, ImTwitter, ImLinkedin2 } from "react-icons/im";
 
 const Icons = ({ type, className }) => {
@@ -25,6 +25,9 @@ const Icons = ({ type, className }) => {
 
     case "menu":
       return <HiMenu className={className} />;
+
+    case "minus":
+      return <HiMinus className={className} />;
 
     case "plus":
       return <HiOutlinePlus className={className} />;

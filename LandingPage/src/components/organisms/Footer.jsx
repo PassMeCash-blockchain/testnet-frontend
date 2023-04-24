@@ -1,15 +1,9 @@
-import React from 'react'
-import { clients, gqls } from '../atoms/libraries';
-
-
-export async function fetchData() {
-  
-}
-
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <div className="mt-10 md:mt-20 py-10 md:py-20 page-space bg-[#EFEFEF]">
+      <div className="container mx-auto">Footer</div>
+    </div>
+  );
+};
 
-export default Footer
+export default Footer;
