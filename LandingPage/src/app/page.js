@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <main className={archivo.className}>
       <Header />
-      {/* <Hero /> */}
+      <Hero />
       {/* <TextSlider /> */}
       {/* <Swap /> */}
       {/* <Services /> */}
