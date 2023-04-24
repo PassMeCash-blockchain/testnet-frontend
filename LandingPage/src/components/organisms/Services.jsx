@@ -29,7 +29,7 @@ const Services = async () => {
   };
 
   return (
-    <div className="grid gap-10 page-space mt-10 md:mt-20 md:gap-0">
+    <div className="grid gap-10 page-space mt-20 md:mt-40 md:gap-0 md:px-0">
       {schema.sections.map((section, i) => (
         <div key={i}>
           <ServiecesSection
