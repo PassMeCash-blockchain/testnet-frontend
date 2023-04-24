@@ -15,8 +15,8 @@ export default async function Home() {
       <Hero />
       {/* <TextSlider /> */}
       {/* <Swap /> */}
-      {/* <Services /> */}
-      {/* <WhatWeDo /> */}
+      <Services />
+      <WhatWeDo />
     </main>
   );
 }
