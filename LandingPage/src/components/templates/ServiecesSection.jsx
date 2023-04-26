@@ -3,7 +3,6 @@ import Text from "../atoms/Text";
 import Heading from "../atoms/Heading";
 import Button from "../atoms/Button";
 import clsx from "clsx";
-// import { clients, gqls } from "../components/atoms/libraries";
 
 export async function fetchData() {}
 
