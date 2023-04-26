@@ -17,7 +17,7 @@ const HeaderMobileNav = ({ navs }) => {
 
       <div
         className={conditionalClass(
-          "fixed bg-[rgba(0,_0,_0,_0.2)] w-screen h-screen top-0 transition-all",
+          "fixed bg-[rgba(0,_0,_0,_0.2)] z-30 w-screen h-screen top-0 transition-all",
           showMobileNav ? "left-0" : "left-[100vw]"
         )}
       >
