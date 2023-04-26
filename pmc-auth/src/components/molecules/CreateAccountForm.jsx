@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "../atoms/Button";
 import Inputs from "../atoms/Inputs";
 
@@ -17,12 +18,12 @@ const CreateAccountForm = () => {
           Use at least 8 characters -1 uppercase letter, 1 number and 1 symbol
         </p>
 
-        <Button filled className="w-full mt-10">
+        <Button filled type="submit" className="w-full mt-10">
           Sign up
         </Button>
 
         <p className="mt-5 text-center">
-          Already registered? <span className="font-semibold">Log in</span>
+          Already registered? <Link href="/login" className="font-semibold">Log in</Link>
         </p>
 
         <p className="text-center mt-8">
