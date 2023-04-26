@@ -4,7 +4,6 @@ import Button from "../atoms/Button";
 import { clients, gqls } from "../atoms/libraries";
 import Image from "next/image";
 import SectionSpacing from "../templates/SectionSpacing";
-import { clients, gqls } from '../atoms/libraries';
 
 
 export async function fetchData() {
