@@ -9,7 +9,7 @@ const Icons = ({ icon, className }) => {
       return (
         <p className="text-red-500">
           Icon name missing! :{" "}
-          <span className="text-neutral-600">icon="Icon Name"</span>
+          <span className="text-neutral-600">{`icon="Icon Name"`}</span>
         </p>
       );
       break;

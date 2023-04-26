@@ -116,6 +116,7 @@ const Inputs = ({ label, type, options, value, setValueFn }) => {
               <p>hi</p>
               {options?.map((option, i) => (
                 <p
+                  key={i}
                   className="cursor-pointer "
                   onClick={() => setValueFn(option)}
                 >
