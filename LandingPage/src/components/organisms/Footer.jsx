@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "../atoms/Logo";
 import Icons from "../atoms/Icons";
-import { 'col-span-2', } from "../atoms/libraries";
+import { conditionalClass } from "../atoms/libraries";
 
 const Footer = () => {
   const linksSchema = [
@@ -70,7 +70,10 @@ const Footer = () => {
         {/* Links */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 md:gap-20">
           {linksSchema.map((category, i) => (
-            <div key={i} className={'col-span-2 lg:col-span-3',conditionalClass()}>
+            <div
+              key={i}
+              className={`col-span-2 lg:col-span-3 ${conditionalClass()}`}
+            >
               <h3 className="text-xl font-semibold">{category.title}</h3>
               <div className="grid gap-3 mt-3">
                 {category.links.map((link, i) => (
