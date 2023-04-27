@@ -68,11 +68,11 @@ const Footer = () => {
         </div>
 
         {/* Links */}
-        <div className="flex flex-wrap gap-10 md:gap-20">
+        <div className="grid grid-cols-3 col-span-2 lg:col-span-3 gap-10 md:gap-20">
           {linksSchema.map((category, i) => (
             <div key={i} className={conditionalClass()}>
               <h3 className="text-xl font-semibold">{category.title}</h3>
-              <div className="grid grid-cols-3 col-span-2 lg:col-span-3 gap-3 mt-3">
+              <div className="grid gap-3 mt-3">
                 {category.links.map((link, i) => (
                   <Link key={i} href="">
                     {link.title}
@@ -90,7 +90,7 @@ const Footer = () => {
               28 Jakpa Road, Effurun, Delta State, Nigeria.
             </p>
           </div>
-          <div className="text-3xl grid grid-cols-[repeat(4,_auto)] gap-5 place-content-center w-max mt-5">
+          <div className="text-3xl grid grid-cols-[repeat(4,_auto)] gap-5 place-items-center w-max mt-5">
             {socialIcons.map((icon, i) => (
               <Icons key={i} type={icon} />
             ))}
