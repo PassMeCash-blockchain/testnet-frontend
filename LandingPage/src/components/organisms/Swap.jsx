@@ -24,9 +24,9 @@ const Swap = async () => {
               placeholder="Amount |"
             />
             <select className="w-full justify-self-start text-center rounded-md bg-[#F0F0F0]">
-              <option value="volvo">{}</option>
-              <option value="saab">{}</option>
-              <option value="fiat">{}</option>
+              <option value="">{}</option>
+              <option value="">{}</option>
+              <option value="">{}</option>
             </select>
             <InputField
               type="text"
@@ -34,9 +34,9 @@ const Swap = async () => {
               placeholder="Convert | 12787799.68"
             />
             <select className="w-full text-center rounded-md bg-[#F0F0F0]">
-              <option value="volvo">{}</option>
-              <option value="saab">{}</option>
-              <option value="fiat">{}</option>
+              <option value="">{}</option>
+              <option value="">{}</option>
+              <option value="">{}</option>
             </select>
           </div>
           <Button filled className="w-full">

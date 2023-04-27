@@ -37,21 +37,23 @@ const Footer = () => {
         { title: "Technical Support", link: "" },
         { title: "Report Issues", link: "" },
       ],
-    },
-    {
-      title: "Buy Anywhere",
-      links: [
-        { title: "Buy BNB", link: "" },
-        { title: "Buy Litecoin", link: "" },
-        { title: "Buy Ripple", link: "" },
-        { title: "Buy Bitcoin", link: "" },
-        { title: "Buy Ethereum", link: "" },
-        { title: "Buy Dogecoin", link: "" },
-        { title: "Buy BUSD", link: "" },
-        { title: "Buy DeFi", link: "" },
-        { title: "Browse Crypto Prices", link: "" },
-      ],
-    },
+    }
+
+    // This section should be left commented
+    // {
+    //   title: "Buy Anywhere",
+    //   links: [
+    //     { title: "Buy BNB", link: "" },
+    //     { title: "Buy Litecoin", link: "" },
+    //     { title: "Buy Ripple", link: "" },
+    //     { title: "Buy Bitcoin", link: "" },
+    //     { title: "Buy Ethereum", link: "" },
+    //     { title: "Buy Dogecoin", link: "" },
+    //     { title: "Buy BUSD", link: "" },
+    //     { title: "Buy DeFi", link: "" },
+    //     { title: "Browse Crypto Prices", link: "" },
+    //   ],
+    // },
   ];
 
   const socialIcons = ["facebook", "twitter", "linkedIn", "instagram"];
@@ -61,7 +63,7 @@ const Footer = () => {
         <div className="lg:hidden">
           <Logo width="w-20" />
           <p className="mt-3 text-lg">
-            28 Japa Road, Effurun, Delta State Nigeria.
+            28 Jakpa Road, Effurun, Delta State, Nigeria.
           </p>
         </div>
 
@@ -70,7 +72,7 @@ const Footer = () => {
           {linksSchema.map((category, i) => (
             <div key={i} className={conditionalClass()}>
               <h3 className="text-xl font-semibold">{category.title}</h3>
-              <div className="grid gap-3 mt-3">
+              <div className="grid grid-cols-3 col-span-2 lg:col-span-3 gap-3 mt-3">
                 {category.links.map((link, i) => (
                   <Link key={i} href="">
                     {link.title}
@@ -85,10 +87,10 @@ const Footer = () => {
           <div className="hidden lg:block">
             <Logo width="w-20" />
             <p className="mt-3 text-lg">
-              28 Japa Road, Effurun, Delta State Nigeria.
+              28 Jakpa Road, Effurun, Delta State, Nigeria.
             </p>
           </div>
-          <div className="text-3xl grid grid-cols-[repeat(4,_auto)] gap-5 items-center w-max mt-5">
+          <div className="text-3xl grid grid-cols-[repeat(4,_auto)] gap-5 place-content-center w-max mt-5">
             {socialIcons.map((icon, i) => (
               <Icons key={i} type={icon} />
             ))}
