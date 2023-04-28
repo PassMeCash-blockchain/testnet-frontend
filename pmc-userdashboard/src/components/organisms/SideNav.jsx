@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const SideNav = () => {
   return (
-    <div className="bg-[#874CF6] w-full p-5">
+    <div className="bg-[#874CF6] w-full p-5 hidden lg:grid">
       {/* Logo */}
       <div className="relative w-20">
         <Image src="/assets/logo.png" width={1000} height={1000} alt="Logo" />
