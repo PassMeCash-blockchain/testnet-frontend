@@ -56,45 +56,52 @@ const Footer = () => {
 
   const socialIcons = ["facebook", "twitter", "linkedIn", "instagram"];
   return (
-    <div className="mt-10 md:mt-20 py-10 md:py-20 page-space bg-[#EFEFEF]">
-      <div className="container mx-auto grid gap-10 lg:grid-cols-[auto_auto]">
-        <div className="lg:hidden">
-          <Logo width="w-20" />
-          <p className="mt-3 text-lg">
-            28 Japa Road, Effurun, Delta State Nigeria.
-          </p>
-        </div>
-
-        {/* Links */}
-        <div className="flex flex-wrap gap-10 md:gap-20">
-          {linksSchema.map((category, i) => (
-            <div key={i} className={conditionalClass()}>
-              <h3 className="text-xl font-semibold">{category.title}</h3>
-              <div className="grid gap-3 mt-3">
-                {category.links.map((link, i) => (
-                  <Link key={i} href="">
-                    {link.title}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div>
-          <div className="hidden lg:block">
+    <div className="mt-20 md:mt-40 bg-[#EFEFEF]">
+      <div className="page-space">
+        <div className="container mx-auto grid gap-10 lg:grid-cols-[auto_auto] py-10 md:py-20">
+          <div className="lg:hidden">
             <Logo width="w-20" />
             <p className="mt-3 text-lg">
               28 Japa Road, Effurun, Delta State Nigeria.
             </p>
           </div>
-          <div className="text-3xl grid grid-cols-[repeat(4,_auto)] gap-5 items-center w-max mt-5">
-            {socialIcons.map((icon, i) => (
-              <Icons key={i} type={icon} />
+
+          {/* Links */}
+          <div className="flex flex-wrap gap-10 md:gap-20">
+            {linksSchema.map((category, i) => (
+              <div key={i} className={conditionalClass()}>
+                <h3 className="text-xl font-semibold">{category.title}</h3>
+                <div className="grid gap-3 mt-3">
+                  {category.links.map((link, i) => (
+                    <Link key={i} href="">
+                      {link.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             ))}
+          </div>
+
+          <div>
+            <div className="hidden lg:block">
+              <Logo width="w-20" />
+              <p className="mt-3 text-lg">
+                28 Japa Road, Effurun, Delta State Nigeria.
+              </p>
+            </div>
+            <div className="text-3xl grid grid-cols-[repeat(4,_auto)] gap-5 items-center w-max mt-5">
+              {socialIcons.map((icon, i) => (
+                <Icons key={i} type={icon} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Copy Right */}
+      <p className="text-center border-t border-[#0B011D] py-5">
+        PassMeCash &copy; 2023
+      </p>
     </div>
   );
 };
