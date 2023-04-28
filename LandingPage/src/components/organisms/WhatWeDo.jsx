@@ -4,7 +4,7 @@ import { Images } from "../atoms/libraries";
 
 const WhatWeDo = async () => {
   return (
-    <div className="grid gap-20 items-center page-space container mx-auto mt-10 md:mt-20 md:grid-cols-[2fr_3fr] lg:max-w-4xl">
+    <div className="grid gap-20 items-center page-space container mx-auto mt-20 md:mt-40 md:grid-cols-[2fr_3fr] lg:max-w-4xl">
       {/* Illustration */}
       <div className="relative w-full hidden md:flex">
         <Images

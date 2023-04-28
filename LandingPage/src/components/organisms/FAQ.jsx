@@ -21,7 +21,7 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="page-space mt-10 md:mt-20">
+    <div className="page-space mt-20 md:mt-40">
       <h2 className="text-3xl font-bold max-w-md leading-[45px] mx-auto text-center md:text-3xl md:leading-[67px]">
         Frequently Asked Questions
       </h2>

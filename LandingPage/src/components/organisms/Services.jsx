@@ -30,6 +30,9 @@ const Services = async () => {
 
   return (
     <div className="grid gap-10 page-space mt-20 md:mt-40 md:gap-0 md:px-0">
+      <h2 className="relative mx-auto w-max mb-5 text-2xl before:w-full before:h-[3px] before:absolute before:bg-[#E5D8FD] before:-bottom-1 md:hidden">
+        {schema.header}
+      </h2>
       {schema.sections.map((section, i) => (
         <div key={i}>
           <ServiecesSection
