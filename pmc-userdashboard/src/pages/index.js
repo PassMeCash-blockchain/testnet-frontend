@@ -6,6 +6,7 @@ import Input from "@/components/atoms/Input";
 import PasswordSetting from "@/components/organisms/PasswordSetting";
 import PhoneSettings from "@/components/organisms/PhoneSettings";
 import ProfileSetting from "@/components/organisms/ProfileSetting";
+import ContactInfo from "@/components/organisms/ContactInfo";
 
 const archivo = Archivo({ subsets: ["latin"] });
 
@@ -17,7 +18,8 @@ export default function Home() {
       {/* <Input type="" /> */}
       <PasswordSetting />
       <PhoneSettings />
-      <ProfileSetting/>
+      <ProfileSetting />
+      <ContactInfo/>
     </main>
   );
 }
