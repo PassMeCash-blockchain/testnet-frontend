@@ -13,11 +13,11 @@ const Hero = async () => {
           Access <span className="text-primaryColor">cash</span> at hand{" "}
           <span className="text-primaryColor">speedily</span> via your crypto or
           cash
-          <span className="text-primaryColor">order.</span>
+          <span className="text-primaryColor">{" "}order.</span>
         </h1>
 
         <p className="mt-5">
-          Want to buy, sell or trade cryptocurrencies with a small commission?
+          Want to swap your cryptocurrencies with a small commission? <br />
           Our platform is the best place for you.
         </p>
 

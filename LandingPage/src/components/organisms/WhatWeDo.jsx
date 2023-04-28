@@ -27,7 +27,7 @@ const WhatWeDo = async () => {
         <Text className="text-[16px] mt-4 text-center md:text-left">
           PassMeCash is an exchange platform that connects users to the nearest
           agent, in exchange for cash or crypto. Our mission is to bridge the
-          gap between our users and access to their funds through the world's
+          gap between our users and access to their funds through the world{"'"}s
           most extensive financial system.
         </Text>
         <Button className="w-full bg-primaryColor text-white px-2 py-2 mt-8">
