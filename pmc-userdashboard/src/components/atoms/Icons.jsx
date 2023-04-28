@@ -15,7 +15,7 @@ import {
 } from "react-icons/hi";
 import { FiMoreHorizontal } from "react-icons/fi";
 import { TbCurrencyNaira, TbSettings, TbArrowsUpDown } from "react-icons/tb";
-import { RiUserFill } from "react-icons/";
+import { RiUserFill,RiLockPasswordFill } from "react-icons/ri";
 import { GrHomeRounded } from "react-icons/gr";
 
 const Icons = ({ type, className }) => {
@@ -75,7 +75,10 @@ const Icons = ({ type, className }) => {
       return <TbSettings className={className} />;
 
     case "user":
-      return <RiUserFill />;
+      return <RiUserFill className={className}/>;
+    
+    case "locked":
+      return <RiLockPasswordFill className={className} />
 
     default:
       return <p>Pick an Icon Type</p>;
