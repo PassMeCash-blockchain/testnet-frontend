@@ -5,6 +5,8 @@ import Sidebar from "@/components/organisms/Sidebar";
 import Input from "@/components/atoms/Input";
 import PasswordSetting from "@/components/organisms/PasswordSetting";
 import PhoneSettings from "@/components/organisms/PhoneSettings";
+import ProfileSetting from "@/components/organisms/ProfileSetting";
+import ContactInfo from "@/components/organisms/ContactInfo";
 
 const archivo = Archivo({ subsets: ["latin"] });
 
@@ -15,7 +17,9 @@ export default function Home() {
       <Sidebar/> */}
       {/* <Input type="" /> */}
       <PasswordSetting />
-      <PhoneSettings/>
+      <PhoneSettings />
+      <ProfileSetting />
+      <ContactInfo/>
     </main>
   );
 }
