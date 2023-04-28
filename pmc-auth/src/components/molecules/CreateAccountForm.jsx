@@ -1,8 +1,21 @@
 import Link from "next/link";
 import Button from "../atoms/Button";
 import Inputs from "../atoms/Inputs";
+import { encrypt, decrypt } from "@/secure";
 
-const CreateAccountForm = () => {
+const CreateAccountForm = () => { 
+  const msg = "this is a test";
+  // initial message
+  console.log('initial message ', msg);
+
+  // encrypt a message
+  const e = encrypt(msg);
+  console.log("encrypted", e.toString());
+
+  // decrypt a message
+  const d = decrypt(e.toString());
+  console.log("decrypted", d);
+
   return (
     <form action="" className="grid grid-rows-[1fr_auto]">
       <div>
@@ -23,7 +36,10 @@ const CreateAccountForm = () => {
         </Button>
 
         <p className="mt-5 text-center">
-          Already registered? <Link href="/login" className="font-semibold">Log in</Link>
+          Already registered?{" "}
+          <Link href="/login" className="font-semibold">
+            Log in
+          </Link>
         </p>
 
         <p className="text-center mt-8">
