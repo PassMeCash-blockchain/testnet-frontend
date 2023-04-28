@@ -4,7 +4,7 @@ import UserPersonalInfo from "@/components/molecules/UserPersonalInfo";
 
 const { default: PageLayout } = require("@/components/templates/PageLayout");
 
-const profile = () => {
+const Profile = () => {
   return (
     <PageLayout>
       <div className="grid gap-5">
@@ -23,4 +23,4 @@ const profile = () => {
   );
 };
 
-export default profile;
+export default Profile;
