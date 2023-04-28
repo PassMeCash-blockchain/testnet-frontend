@@ -15,7 +15,9 @@ module.exports = {
       'dangerColor': '#EA4335',
       'processingColor': '#4564D6',
       'greenColor': '#0AC18E',
-      'greyColor':'#E5D8FD'
+        'greyColor': '#E5D8FD',
+      'edgeColor':'#FCFCFC',
+      'verify':'#EBEBEB'
     },
     },
   },

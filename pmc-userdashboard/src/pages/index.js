@@ -3,6 +3,8 @@ import { Archivo } from "next/font/google";
 import ButtonRequest from "@/components/molecules/ButtonRequest";
 import Sidebar from "@/components/organisms/Sidebar";
 import Input from "@/components/atoms/Input";
+import PasswordSetting from "@/components/organisms/PasswordSetting";
+import PhoneSettings from "@/components/organisms/PhoneSettings";
 
 const archivo = Archivo({ subsets: ["latin"] });
 
@@ -11,7 +13,9 @@ export default function Home() {
     <main>
       {/* <ButtonRequest />
       <Sidebar/> */}
-      <Input type="" />
+      {/* <Input type="" /> */}
+      <PasswordSetting />
+      <PhoneSettings/>
     </main>
   );
 }
