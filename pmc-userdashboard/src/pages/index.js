@@ -23,11 +23,11 @@ export default function Home() {
       <Sidebar/> */}
       {/* <Input type="" /> */}
 
-      <PasswordSetting />
+      {/* <PasswordSetting />
       <PhoneSettings />
       <ProfileSetting />
-      <ContactInfo/>
-
+      <ContactInfo/> */}
+      <Input value="Schedule Payment"  type={`schedule`}/>
     </main>
   );
 }
