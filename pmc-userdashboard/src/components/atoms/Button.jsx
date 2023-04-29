@@ -2,10 +2,10 @@ import React from "react";
 import { conditionalClass } from "./libraries";
 import { ArrowIcon } from "./Icons";
 import clsx from "clsx";
-const Button = ({ filled, className, children,icon }) => {
+const Button = ({ filled, className, children,icon,type }) => {
   
   switch (type) {
-    case "IconButton":
+    case "Icon":
       return (
         <>
           <button className="bg-inputColor grid grid-cols-6  px-2 py-2 w-[300px]">
@@ -56,7 +56,16 @@ const Button = ({ filled, className, children,icon }) => {
     </button>
   );
     
-  
+    case "menu":
+      return (
+        <div className={clsx(
+            "border border-[#874CF6]  py-3 px-5 cursor-pointer  rounded-md",
+            filled ? "bg-[#874CF6] text-white" : "text-[#874CF6]",
+            className
+          )} >
+            {children}
+        </div>
+      )
     default:
       break;
   }
