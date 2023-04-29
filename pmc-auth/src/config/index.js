@@ -17,6 +17,8 @@ export const API_URL =
     ? MAIN
     : "";
 
+console.log(API_URL, MODE)
+
 export const Axios = axios.create({
   baseURL: API_URL,
 });
