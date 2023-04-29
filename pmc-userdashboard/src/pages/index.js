@@ -29,10 +29,7 @@ export default function Home() {
       <PhoneSettings />
       <ProfileSetting />
       <ContactInfo/> */}
-      {/* <ThanksModal /> */}
-      {/* <SendToMatic /> */}
-      {/* <ChooseNetwork /> */}
-      <MaticCard />
+
     </main>
   );
 }

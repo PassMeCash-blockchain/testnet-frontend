@@ -17,6 +17,18 @@ import { FiMoreHorizontal } from "react-icons/fi";
 import { TbCurrencyNaira, TbSettings, TbArrowsUpDown } from "react-icons/tb";
 import { RiUserFill,RiLockPasswordFill } from "react-icons/ri";
 import { GrHomeRounded } from "react-icons/gr";
+import { SlArrowLeft, SlArrowRight, SlArrowDown } from "react-icons/sl";
+import { AiOutlineFieldTime } from 'react-icons/ai'
+
+export const ArrowIcon = ({ direction }) => {
+  return (
+    <>
+      {direction === "left" && <SlArrowLeft />}
+      {direction === "right" && <SlArrowRight />}
+      {direction === "down" && <SlArrowDown />}
+    </>
+  );
+};
 
 const Icons = ({ type, className }) => {
   switch (type) {
@@ -79,6 +91,8 @@ const Icons = ({ type, className }) => {
     
     case "locked":
       return <RiLockPasswordFill className={className} />
+    case "timer":
+      return <AiOutlineFieldTime className={ className } />
 
     default:
       return <p>Pick an Icon Type</p>;
