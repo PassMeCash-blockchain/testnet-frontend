@@ -1,6 +1,7 @@
 import { loginThunk } from "@/features/reducers/auth";
 import Button from "../atoms/Button";
 import Inputs from "../atoms/Inputs";
+import { useState } from "react";
 
 const LoginForm = () => {
   const [login, setLogin] = useState("");
