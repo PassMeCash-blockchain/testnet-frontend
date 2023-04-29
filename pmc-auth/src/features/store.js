@@ -6,5 +6,5 @@ export const store = configureStore({
   reducer: {
     auth: authReducer,
   },
-  devTools: (MODE !== "live" || MODE !== 'test'),
+  devTools: MODE === 'local',
 });

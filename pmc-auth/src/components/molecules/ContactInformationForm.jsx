@@ -1,9 +1,24 @@
 import Inputs from "../atoms/Inputs";
 import Button from "../atoms/Button";
+import { useState } from "react";
+import { contactThunk } from "@/features/reducers/auth";
 
 const ContactInformationForm = () => {
+  const [state, setState] = useState("");
+  const [lga, setLga] = useState("");
+  const [address, setAddress] = useState("");
+  const [addressAlt, setAddressAlt] = useState("");
+
+  const handledSubmit = () => {
+    e.preventDefault();
+
+    dispatch(contactThunk({ state, lga, address, addressAlt }));
+  };
   return (
-    <form className="grid grid-rows-[auto_1fr_auto] items-start sm:block">
+    <form
+      onSubmit={handledSubmit}
+      className="grid grid-rows-[auto_1fr_auto] items-start sm:block"
+    >
       {/* Description */}
       <div>
         <h2 className="text-xl font-semibold text-[#0B011D] text-center md:text-2xl">
@@ -17,10 +32,25 @@ const ContactInformationForm = () => {
 
       {/* Inputs */}
       <div className="grid gap-5 mt-10">
-        <Inputs type="select" label="State" />
-        <Inputs type="select" label="LGA" />
-        <Inputs type="text" label="Address1" />
-        <Inputs type="text" label="Address2" />
+        <Inputs
+          type="select"
+          label="State"
+          setValueFn={setState}
+          value={state}
+        />
+        <Inputs type="select" label="LGA" setValueFn={setLga} value={lga} />
+        <Inputs
+          type="text"
+          label="Address1"
+          setValueFn={setAddress}
+          value={address}
+        />
+        <Inputs
+          type="text"
+          label="Address2"
+          setValueFn={setAddressAlt}
+          value={addressAlt}
+        />
       </div>
 
       <Button filled className="w-full mt-10">
