@@ -3,7 +3,7 @@ import {
   AiOutlineQrcode,
   AiOutlineCaretDown,
 } from "react-icons/ai";
-import { MdCurrencyBitcoin, MdClose } from "react-icons/md";
+import { MdCurrencyBitcoin, MdClose, MdCurrencyExchange } from "react-icons/md";
 import { BsArrowUpLeft, BsArrowDownRight } from "react-icons/bs";
 import {
   HiArrowPath,
@@ -31,6 +31,7 @@ export const ArrowIcon = ({ direction }) => {
 };
 
 const Icons = ({ type, className }) => {
+    console.log(type)
   switch (type) {
     case "bank":
       return <AiOutlineBank className={className} />;
@@ -81,7 +82,7 @@ const Icons = ({ type, className }) => {
       return <BsArrowUpLeft className={className} />;
 
     case "swap":
-      return <HiArrowPath className={className} />;
+      return <MdCurrencyExchange className={className} />;
 
     case "setting":
       return <TbSettings className={className} />;
@@ -98,6 +99,7 @@ const Icons = ({ type, className }) => {
       return <p>Pick an Icon Type</p>;
       break;
   }
+
 };
 
 export default Icons;

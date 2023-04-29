@@ -12,6 +12,8 @@ import ThanksModal from "@/components/molecules/ThanksModal";
 
 import ProfileSetting from "@/components/organisms/ProfileSetting";
 import ContactInfo from "@/components/organisms/ContactInfo";
+import Menu from "@/components/molecules/Menu";
+
 import SendToMatic from "@/components/molecules/SendToMatic";
 import ChooseNetwork from "@/components/molecules/ChooseNetwork";
 import MaticCard from "@/components/atoms/MaticCard";
