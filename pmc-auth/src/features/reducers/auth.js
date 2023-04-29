@@ -128,7 +128,7 @@ export const contactThunk = createAsyncThunk(
 );
 
 export const loginThunk = createAsyncThunk(
-  "create/contact",
+  "account/login",
   async ({ login, password }, thunkAPI) => {
     const body = JSON.stringify({ login, password });
 

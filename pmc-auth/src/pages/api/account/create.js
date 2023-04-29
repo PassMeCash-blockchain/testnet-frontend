@@ -1,7 +1,7 @@
 import { Axios } from "@/config";
 import { decrypt, encrypt } from "@/secure";
 
-export default async (req, res) => {
+const create = async (req, res) => {
   if (req.method === "POST") {
     const { phone_number, password } = req.body;
 
@@ -27,3 +27,5 @@ export default async (req, res) => {
     return res.status(405).json({ error: `Method ${req.method} not allowed` });
   }
 };
+
+export default create;

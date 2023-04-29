@@ -1,6 +1,6 @@
 import { Axios } from "@/config";
 
-export default async (req, res) => {
+const personal = async (req, res) => {
   if (req.method === "POST") {
     const { first_name, last_nme, dob, email } = req.body;
 
@@ -26,3 +26,5 @@ export default async (req, res) => {
     return res.status(405).json({ error: `Method ${req.method} not allowed` });
   }
 };
+
+export default personal;

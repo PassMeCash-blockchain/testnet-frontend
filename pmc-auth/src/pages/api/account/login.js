@@ -1,6 +1,6 @@
 import { Access, Axios, Cookie, Refresh, MODE } from "@/config";
 
-export default async (req, res) => {
+const login = async (req, res) => {
   if (req.method === "POST") {
     const { login, password } = req.body;
 
@@ -46,3 +46,5 @@ export default async (req, res) => {
     return res.status(405).json({ error: `Method ${req.method} not allowed` });
   }
 };
+
+export default login;
