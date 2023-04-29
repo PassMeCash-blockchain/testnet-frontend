@@ -12,7 +12,9 @@ import ThanksModal from "@/components/molecules/ThanksModal";
 
 import ProfileSetting from "@/components/organisms/ProfileSetting";
 import ContactInfo from "@/components/organisms/ContactInfo";
-
+import SendToMatic from "@/components/molecules/SendToMatic";
+import ChooseNetwork from "@/components/molecules/ChooseNetwork";
+import MaticCard from "@/components/atoms/MaticCard";
 
 const archivo = Archivo({ subsets: ["latin"] });
 
@@ -23,11 +25,14 @@ export default function Home() {
       <Sidebar/> */}
       {/* <Input type="" /> */}
 
-      <PasswordSetting />
+      {/* <PasswordSetting />
       <PhoneSettings />
       <ProfileSetting />
-      <ContactInfo/>
-
+      <ContactInfo/> */}
+      {/* <ThanksModal /> */}
+      {/* <SendToMatic /> */}
+      {/* <ChooseNetwork /> */}
+      <MaticCard />
     </main>
   );
 }
