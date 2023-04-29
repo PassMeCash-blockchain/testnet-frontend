@@ -197,16 +197,6 @@ const authSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-    //   .addCase(getFaq.pending, (state) => {
-    //     state.loading = !!1;
-    //   })
-    //   .addCase(getFaq.fulfilled, (state, action) => {
-    //     state.loading = !!0;
-    //     state.faqs = action.payload;
-    //   })
-    //   .addCase(getFaq.rejected, (state) => {
-    //     state.loading = !!0;
-    //   })
       .addCase(loginThunk.pending, (state) => {
         state.loading = !!1;
       })
