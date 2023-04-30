@@ -1,3 +1,4 @@
+
 import clsx from "clsx";
 import Icons from "../atoms/Icons";
 import Image from "next/image";
@@ -297,3 +298,4 @@ const UserTransactions = () => {
 };
 
 export default UserTransactions;
+

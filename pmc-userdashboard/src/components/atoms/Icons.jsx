@@ -19,6 +19,7 @@ import { RiUserFill, RiLockPasswordFill } from "react-icons/ri";
 import { GrHomeRounded } from "react-icons/gr";
 import { SlArrowLeft, SlArrowRight, SlArrowDown } from "react-icons/sl";
 import { AiOutlineFieldTime } from "react-icons/ai";
+import { MdOutlineCancel } from "react-icons/md";
 
 export const ArrowIcon = ({ direction }) => {
   return (
@@ -100,6 +101,8 @@ const Icons = ({ type, className }) => {
 
     case "user":
       return <RiUserFill className={className} />;
+    case "cancel":
+      return <MdOutlineCancel />;
 
     default:
       return <p>Pick an Icon Type</p>;
