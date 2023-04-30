@@ -21,8 +21,8 @@ export default function Home() {
       <ContactInfo/> */}
       {/* <Input value="Schedule Payment"  type={`schedule`}/> */}
       <PageLayout>
-        {/* <UserBalance />
-        <UserTransactions /> */}
+        <UserBalance />
+        <UserTransactions />
         <MobileMenu />
 
         <Image src="/SVG/qr-code.svg" width={250} height={250} alt="QR code" />
