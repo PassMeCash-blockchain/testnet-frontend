@@ -11,8 +11,13 @@ const SideBackground = ({ img, title, text, className }) => {
       <p className="max-w-xl px-5 text-lg text-center mx-auto mt-7">{text}</p>
 
       {/* Background Image */}
+<<<<<<< HEAD
+      <div className="relative w-[50vw] max-w-[500px] h-[50vw] max-h-[500px] mt-6 mx-auto">
+        <Image src={img} fill alt="Background Image" />
+=======
       <div className="relative w-[50vw] max-w-[500px] mt-6 mx-auto">
         <Image src={img} width={1000} height={1000} alt="Background Image" />
+>>>>>>> origin/main
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="px-10 py-5 shadow-[0px_-2px_14px_-5px_rgba(0,0,0,0.3)] grid grid-cols-[auto_1fr_auto] gap-10">
+    <div className="px-10 py-5 shadow-[0px_-2px_14px_-5px_rgba(0,0,0,0.3)] grid md:grid-cols-[auto_auto_auto] grid-cols-[auto_1fr] gap-10 font-normal text-base">
       {/* Logo */}
       <div className="w-20">
         <Image
@@ -14,10 +14,21 @@ const Header = () => {
       </div>
 
       {/* Nav */}
-      <div className="text-center">Navs</div>
+      <div className="text-center hidden md:grid grid-cols-[auto_auto_auto_auto] gap-1 text-[#B3B3B3]">
+        <div className="text-[#874CF6]">Home</div>
+        <div>My wallet</div>
+        <div>Card</div>
+        <div>Transactions</div>
+      </div>
 
       {/* Notification and Settings */}
-      <div>notifi and settings</div>
+      <div className="justify-self-end grid md:grid-cols-2 md:gap-5">
+        <div>Notifications</div>
+        <div className="hidden md:block">
+          {/* Icon */}
+          Settings
+        </div>
+      </div>
     </div>
   );
 };
