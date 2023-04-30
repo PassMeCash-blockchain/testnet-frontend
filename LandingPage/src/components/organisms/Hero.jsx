@@ -13,7 +13,7 @@ const Hero = async () => {
           Access <span className="text-primaryColor">cash</span> at hand{" "}
           <span className="text-primaryColor">speedily</span> via your crypto or
           cash
-          <span className="text-primaryColor">{" "}order.</span>
+          <span className="text-primaryColor"> order.</span>
         </h1>
 
         <p className="mt-5">

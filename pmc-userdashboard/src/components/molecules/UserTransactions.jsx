@@ -111,8 +111,8 @@ const UserTransactions = () => {
 
           {/* Table Content */}
           <div className="grid gap-5">
-            {tableContent.map((transaction) => (
-              <div className={clsx("text-sm mt-5", tableRowGrid)}>
+            {tableContent.map((transaction, i) => (
+              <div key={i} className={clsx("text-sm mt-5", tableRowGrid)}>
                 {/* receive or sent */}
                 <div className="bg-[#F5F5F5] w-[30px] h-[30px] rounded-full grid place-items-center">
                   <Icons

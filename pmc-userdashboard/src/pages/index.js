@@ -2,6 +2,8 @@ import { Archivo } from "next/font/google";
 import PageLayout from "@/components/templates/PageLayout";
 import UserBalance from "@/components/molecules/UserBalance";
 import UserTransactions from "@/components/molecules/UserTransactions";
+import Header from "@/components/organisms/Header";
+import MobileMenu from "@/components/organisms/MobileMenu";
 
 const archivo = Archivo({ subsets: ["latin"] });
 
@@ -18,8 +20,9 @@ export default function Home() {
       <ContactInfo/> */}
       {/* <Input value="Schedule Payment"  type={`schedule`}/> */}
       <PageLayout>
-        <UserBalance />
-        <UserTransactions />
+        {/* <UserBalance />
+        <UserTransactions /> */}
+        <MobileMenu />
       </PageLayout>
     </main>
   );
