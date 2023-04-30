@@ -1,9 +1,8 @@
 import React from "react";
 import { conditionalClass } from "./libraries";
-import { ArrowIcon } from "./Icons";
+import { BsArrowLeft, ArrowIcon } from "./Icons";
 import clsx from "clsx";
-const Button = ({ filled, className, children,icon,type }) => {
-  
+const Button = ({ filled, className, children, icon, type }) => {
   switch (type) {
     case "Icon":
       return (
@@ -12,15 +11,13 @@ const Button = ({ filled, className, children,icon,type }) => {
             <div className="cols-span-1">
               <span>{icon}</span>
             </div>
-           
+
             <div className="cols-span-5">
               {children}
               <ArrowIcon direction={`right`} />
             </div>
-           
           </button>
         </>
-        
       );
     case "filled":
       return (
@@ -34,38 +31,36 @@ const Button = ({ filled, className, children,icon,type }) => {
           {children}
         </button>
       );
-    
+
     case "neutral":
       return (
         <button
-          className={clsx(
-            "bg-inputColor text-secondaryColor",
-            className
-          )}
+          className={clsx("bg-inputColor text-secondaryColor", className)}
         >
           {children}
         </button>
       );
-    
-    
-      case "back":
+
+    case "back":
       return (
-    <button className="grid grid-cols-[auto_1fr] items-center gap-2 mt-5 font-medium">
-      <BsArrowLeft />
-      Back to login
-    </button>
-  );
-    
+        <button className="grid grid-cols-[auto_1fr] items-center gap-2 mt-5 font-medium">
+          <BsArrowLeft />
+          Back to login
+        </button>
+      );
+
     case "menu":
       return (
-        <div className={clsx(
+        <div
+          className={clsx(
             "border border-[#874CF6]  py-3 px-5 cursor-pointer  rounded-md",
             filled ? "bg-[#874CF6] text-white" : "text-[#874CF6]",
             className
-          )} >
-            {children}
+          )}
+        >
+          {children}
         </div>
-      )
+      );
     default:
       break;
   }

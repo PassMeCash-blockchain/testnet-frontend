@@ -15,10 +15,17 @@ const LoginForm = () => {
   return (
     <form onSubmit={handledSubmit} className="grid grid-rows-[1fr_auto]">
       <div>
+<<<<<<< HEAD
+        <h2 className="text-2xl text-center font-semibold mt-8 ">
+          Login Account
+        </h2>
+        <p className="mt-4 text-center">
+=======
         <h2 className="text-2xl text-center font-semibold mt-10 md:text-left">
           Login Account
         </h2>
         <p className="mt-4 text-center md:text-left">
+>>>>>>> origin/main
           Don’t have an account? <span className="font-semibold">Sign up</span>
         </p>
 
