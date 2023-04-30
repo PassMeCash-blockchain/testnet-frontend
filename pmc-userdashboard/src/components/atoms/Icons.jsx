@@ -31,7 +31,6 @@ export const ArrowIcon = ({ direction }) => {
 };
 
 const Icons = ({ type, className }) => {
-  console.log(type);
   switch (type) {
     case "bank":
       return <AiOutlineBank className={className} />;
