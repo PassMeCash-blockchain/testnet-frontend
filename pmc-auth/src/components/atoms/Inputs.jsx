@@ -5,7 +5,7 @@ import clsx from "clsx";
 const Inputs = ({ label, type, options, value, setValueFn }) => {
   const [isFocus, setIsFocus] = useState(false);
   const [showPass, setShowPass] = useState(false);
-  const [isDropDown, setisDropDown] = useState(false);
+  const [isDropDown, setIsDropDown] = useState(false);
   const input = useRef(null);
 
   useEffect(() => {
@@ -73,7 +73,7 @@ const Inputs = ({ label, type, options, value, setValueFn }) => {
             className="pr-3 cursor-pointer"
             onClick={() => setShowPass(!showPass)}
           >
-            {showPass ? <EyeIcon type="open" /> : <EyeIcon type="close" />}
+            {showPass ? <EyeIcon type="close" /> : <EyeIcon type="open" /> }
           </div>
 
           {/* Label */}
@@ -92,7 +92,7 @@ const Inputs = ({ label, type, options, value, setValueFn }) => {
       return (
         <label
           className="border border-[#ABA6A6] block p-4 relative rounded-md"
-          onClick={() => setisDropDown(!isDropDown)}
+          onClick={() => setIsDropDown(!isDropDown)}
         >
           <div className="grid grid-cols-[1fr_auto] items-center cursor-pointer">
             <p className="leading-[15px]">{value}</p>
@@ -129,6 +129,7 @@ const Inputs = ({ label, type, options, value, setValueFn }) => {
 >>>>>>> origin/main
               {options?.map((option, i) => (
                 <p
+                  key={i}
                   className="cursor-pointer "
                   onClick={() => setValueFn(option)}
                 >

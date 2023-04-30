@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .page-space {
+    @apply px-4 md:px-8;
+  }
+}

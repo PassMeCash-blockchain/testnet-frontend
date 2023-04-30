@@ -1,32 +1,29 @@
-<<<<<<< HEAD
-import Image from "next/image";
 import { Archivo } from "next/font/google";
-import ButtonRequest from "@/components/molecules/ButtonRequest";
-import Sidebar from "@/components/organisms/Sidebar";
-import { Cards } from "@/components/molecules/Cards";
-import { TransactionList } from "@/components/molecules/TransactionList";
+import PageLayout from "@/components/templates/PageLayout";
+import UserBalance from "@/components/molecules/UserBalance";
+import UserTransactions from "@/components/molecules/UserTransactions";
+import Header from "@/components/organisms/Header";
+import MobileMenu from "@/components/organisms/MobileMenu";
 
 const archivo = Archivo({ subsets: ["latin"] });
-=======
-import Image from 'next/image'
-import { Archivo } from 'next/font/google'
-import ButtonRequest from '@/components/molecules/ButtonRequest'
-import Sidebar from '@/components/organisms/Sidebar'
-
-const archivo = Archivo({ subsets: ['latin'] })
->>>>>>> origin/main
 
 export default function Home() {
   return (
     <main>
-<<<<<<< HEAD
-      <TransactionList type="occupied" />
+      {/* <ButtonRequest />
+      <Sidebar/> */}
+      {/* <Input type="" /> */}
+
+      {/* <PasswordSetting />
+      <PhoneSettings />
+      <ProfileSetting />
+      <ContactInfo/> */}
+      {/* <Input value="Schedule Payment"  type={`schedule`}/> */}
+      <PageLayout>
+        {/* <UserBalance />
+        <UserTransactions /> */}
+        <MobileMenu />
+      </PageLayout>
     </main>
   );
-=======
-      <ButtonRequest />
-      <Sidebar/>
-    </main>
-  )
->>>>>>> origin/main
 }

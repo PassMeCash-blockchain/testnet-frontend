@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Pass Me Cash",
+  title: "PassMeCash",
   description: "Access cash at hand speedily via your crypto or cash order.",
 };
 

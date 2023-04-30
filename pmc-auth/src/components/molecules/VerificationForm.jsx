@@ -17,7 +17,7 @@ const VerificationForm = () => {
 
       <div className="flex space-x-4 w-max mx-auto md:space-x-8">
         {[...Array(numberOFInputOTP)].map((e, i) => (
-          <Inputs type="otp" />
+          <Inputs key={i} type="otp" />
         ))}
       </div>
 
