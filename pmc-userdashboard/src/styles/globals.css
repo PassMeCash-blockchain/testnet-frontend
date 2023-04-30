@@ -9,7 +9,7 @@
 @layer {
   .custom-scroll::-webkit-scrollbar {
     background-color: transparent;
-    width: 5px;
+    width: 7px;
   }
 
   .custom-scroll::-webkit-scrollbar-thumb {
