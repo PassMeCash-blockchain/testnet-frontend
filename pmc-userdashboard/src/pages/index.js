@@ -20,8 +20,8 @@ export default function Home() {
       <ContactInfo/> */}
       {/* <Input value="Schedule Payment"  type={`schedule`}/> */}
       <PageLayout>
-        {/* <UserBalance />
-        <UserTransactions /> */}
+        <UserBalance />
+        <UserTransactions />
         <MobileMenu />
       </PageLayout>
     </main>
