@@ -4,21 +4,21 @@ import {
   AiOutlineCaretDown,
 } from "react-icons/ai";
 import { MdCurrencyBitcoin, MdClose } from "react-icons/md";
-import { BsArrowUpLeft, BsArrowDownRight } from "react-icons/bs";
+import { BsArrowUpLeft, BsArrowDownRight, BsInfinity } from "react-icons/bs";
 import {
-  HiArrowPath,
   HiChevronDown,
   HiChevronRight,
   HiOutlineBell,
   HiMenu,
   HiOutlineCreditCard,
 } from "react-icons/hi";
-import { FiMoreHorizontal } from "react-icons/fi";
+import { HiArrowPath } from "react-icons/hi2";
+import { FiMoreHorizontal, FiSearch } from "react-icons/fi";
 import { TbCurrencyNaira, TbSettings, TbArrowsUpDown } from "react-icons/tb";
-import { RiUserFill,RiLockPasswordFill } from "react-icons/ri";
+import { RiUserFill, RiLockPasswordFill } from "react-icons/ri";
 import { GrHomeRounded } from "react-icons/gr";
 import { SlArrowLeft, SlArrowRight, SlArrowDown } from "react-icons/sl";
-import { AiOutlineFieldTime } from 'react-icons/ai'
+import { AiOutlineFieldTime } from "react-icons/ai";
 
 export const ArrowIcon = ({ direction }) => {
   return (
@@ -59,6 +59,12 @@ const Icons = ({ type, className }) => {
     case "home":
       return <GrHomeRounded className={className} />;
 
+    case "infinity":
+      return <BsInfinity className={className} />;
+
+    case "locked":
+      return <RiLockPasswordFill className={className} />;
+
     case "menu":
       return <HiMenu className={className} />;
 
@@ -83,16 +89,17 @@ const Icons = ({ type, className }) => {
     case "swap":
       return <HiArrowPath className={className} />;
 
+    case "search":
+      return <FiSearch className={className} />;
+
     case "setting":
       return <TbSettings className={className} />;
 
     case "user":
-      return <RiUserFill className={className}/>;
-    
-    case "locked":
-      return <RiLockPasswordFill className={className} />
+      return <RiUserFill className={className} />;
+
     case "timer":
-      return <AiOutlineFieldTime className={ className } />
+      return <AiOutlineFieldTime className={className} />;
 
     default:
       return <p>Pick an Icon Type</p>;
