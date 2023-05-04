@@ -3,7 +3,7 @@ import PageLayout from "@/components/templates/PageLayout";
 import UserBalance from "@/components/molecules/UserBalance";
 import UserTransactions from "@/components/molecules/UserTransactions";
 import Header from "@/components/organisms/Header";
-import MobileMenu from "@/components/organisms/MobileMenu";
+import MobileMenu from "@/components/organisms/MobileNav";
 
 const archivo = Archivo({ subsets: ["latin"] });
 
@@ -22,7 +22,6 @@ export default function Home() {
       <PageLayout>
         <UserBalance />
         <UserTransactions />
-        <MobileMenu />
       </PageLayout>
     </main>
   );
