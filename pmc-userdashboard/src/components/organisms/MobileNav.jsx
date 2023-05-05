@@ -12,7 +12,7 @@ const MobileNav = () => {
   ];
 
   return (
-    <div className="grid grid-cols-[repeat(4,_1fr)] gap-10 items-center justify-items-center justify-center px-4 border-t border-[#ECEDEB] py-3 text-[#B3B3B3] text-xs font-semibold md:hidden">
+    <div className="grid grid-cols-[repeat(4,_1fr)] gap-10 items-center justify-items-center justify-center px-4 border-t border-[#ECEDEB] py-3 text-[#B3B3B3] text-xs font-medium md:hidden">
       {navs.map((nav, i) => (
         <div
           key={i}

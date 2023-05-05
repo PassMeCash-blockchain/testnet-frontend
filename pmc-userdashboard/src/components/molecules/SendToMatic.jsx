@@ -1,10 +1,11 @@
 import Button from "../atoms/Button";
+import Icons from "../atoms/Icons";
 import Modal from "../atoms/Modal";
 
 const SendToMatic = () => {
   return (
     <Modal className={"p-3"}>
-      <div>Icon</div>
+      <Icons type="cancel" className="h-20 w-20" />
       <h3 className="font-semibold text-2xl py-5">Send To Matic</h3>
       <div className="grid gap-2">
         <label>Address</label>
