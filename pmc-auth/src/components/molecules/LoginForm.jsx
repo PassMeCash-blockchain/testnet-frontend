@@ -6,7 +6,7 @@ import { useState } from "react";
 const LoginForm = () => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
- 
+
   const handledSubmit = () => {
     e.preventDefault();
 
@@ -15,23 +15,26 @@ const LoginForm = () => {
   return (
     <form onSubmit={handledSubmit} className="grid grid-rows-[1fr_auto]">
       <div>
-<<<<<<< HEAD
-        <h2 className="text-2xl text-center font-semibold mt-8 ">
-          Login Account
-        </h2>
-        <p className="mt-4 text-center">
-=======
         <h2 className="text-2xl text-center font-semibold mt-10 md:text-left">
           Login Account
         </h2>
         <p className="mt-4 text-center md:text-left">
->>>>>>> origin/main
           Don’t have an account? <span className="font-semibold">Sign up</span>
         </p>
 
         <div className="mt-8 grid gap-7">
-          <Inputs type="text" label="Email or Phone Number"  setValueFn={setLogin} value={login}/>
-          <Inputs type="password" label="Password"  setValueFn={setPassword} value={password}/>
+          <Inputs
+            type="text"
+            label="Email or Phone Number"
+            setValueFn={setLogin}
+            value={login}
+          />
+          <Inputs
+            type="password"
+            label="Password"
+            setValueFn={setPassword}
+            value={password}
+          />
         </div>
         <p className="w-max ml-auto mt-4">Forgot Password?</p>
         <p className="text-center mt-8">
