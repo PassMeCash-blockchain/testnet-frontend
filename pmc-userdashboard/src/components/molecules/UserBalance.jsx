@@ -1,4 +1,5 @@
 import Icons from "../atoms/Icons";
+import Send from "../organisms/Send";
 
 const UserBalance = () => {
   return (
@@ -32,12 +33,7 @@ const UserBalance = () => {
         </div>
 
         {/* Send */}
-        <div className="grid gap-3 justify-items-center">
-          <button className="w-10 h-10 grid place-items-center rounded-full bg-[#874CF6]">
-            <Icons type="send" className="text-xl" />
-          </button>
-          <p className="font-medium">Send</p>
-        </div>
+        <Send />
       </div>
     </div>
   );

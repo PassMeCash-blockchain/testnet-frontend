@@ -2,17 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-@layer {
-=======
 @layer base {
->>>>>>> origin/main
   input::-ms-reveal {
     display: none;
   }
-
-<<<<<<< HEAD
-=======
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -23,7 +16,6 @@
     -moz-appearance: textfield;
   }
 
->>>>>>> origin/main
   .customized-date-input::-webkit-calendar-picker-indicator {
     background-image: url("/svg/date-icon.svg");
     background-size: 150%;
@@ -32,12 +24,9 @@
     cursor: pointer;
   }
 }
-<<<<<<< HEAD
-=======
 
 @layer components {
   .page-spacing-x {
     @apply px-4 md:px-8;
   }
 }
->>>>>>> origin/main

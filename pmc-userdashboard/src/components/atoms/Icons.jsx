@@ -3,21 +3,30 @@ import {
   AiOutlineQrcode,
   AiOutlineCaretDown,
 } from "react-icons/ai";
-import { BsArrowUpLeft, BsArrowDownRight, BsInfinity } from "react-icons/bs";
-import { MdCurrencyBitcoin, MdClose, MdCurrencyExchange } from "react-icons/md";
 import {
-  HiChevronDown,
-  HiChevronRight,
-  HiOutlineBell,
-  HiMenu,
-  HiOutlineCreditCard,
-} from "react-icons/hi";
-import { HiArrowPath } from "react-icons/hi2";
+  BsArrowUpLeft,
+  BsArrowDownRight,
+  BsInfinity,
+  BsWallet,
+  BsReceipt,
+  BsCreditCard,
+  BsPeople,
+  BsPerson,
+  BsCheckCircleFill,
+  BsClockHistory,
+} from "react-icons/bs";
+import { MdCurrencyBitcoin, MdClose, MdCurrencyExchange } from "react-icons/md";
+import { HiChevronDown, HiMenu } from "react-icons/hi";
 import { FiMoreHorizontal, FiSearch } from "react-icons/fi";
 import { TbCurrencyNaira, TbSettings, TbArrowsUpDown } from "react-icons/tb";
-import { RiUserFill, RiLockPasswordFill } from "react-icons/ri";
-import { GrHomeRounded } from "react-icons/gr";
-import { SlArrowLeft, SlArrowRight, SlArrowDown } from "react-icons/sl";
+import { RiLockPasswordFill } from "react-icons/ri";
+import {
+  SlArrowLeft,
+  SlArrowRight,
+  SlArrowDown,
+  SlBell,
+  SlHome,
+} from "react-icons/sl";
 import { AiOutlineFieldTime } from "react-icons/ai";
 import { MdOutlineCancel } from "react-icons/md";
 
@@ -37,15 +46,18 @@ const Icons = ({ type, className }) => {
       return <AiOutlineBank className={className} />;
 
     case "bell":
-      return <HiOutlineBell className={className} />;
+      return <SlBell className={className} />;
 
     case "bitcoin":
       return <MdCurrencyBitcoin className={className} />;
 
     case "card":
-      return <HiOutlineCreditCard className={className} />;
+      return <BsCreditCard className={className} />;
 
-    case "closde":
+    case "check-circle":
+      return <BsCheckCircleFill className={className} />;
+
+    case "close":
       return <MdClose className={className} />;
 
     case "down":
@@ -58,7 +70,7 @@ const Icons = ({ type, className }) => {
       return <TbArrowsUpDown className={className} />;
 
     case "home":
-      return <GrHomeRounded className={className} />;
+      return <SlHome className={className} />;
 
     case "infinity":
       return <BsInfinity className={className} />;
@@ -75,14 +87,23 @@ const Icons = ({ type, className }) => {
     case "naira":
       return <TbCurrencyNaira className={className} />;
 
+    case "people":
+      return <BsPeople className={className} />;
+
     case "QRcode":
       return <AiOutlineQrcode className={className} />;
+
+    case "receipt":
+      return <BsReceipt className={className} />;
 
     case "receive":
       return <BsArrowDownRight className={className} />;
 
     case "right":
-      return <HiChevronRight className={className} />;
+      return <SlArrowRight className={className} />;
+
+    case "schedule":
+      return <BsClockHistory className={className} />;
 
     case "send":
       return <BsArrowUpLeft className={className} />;
@@ -100,9 +121,13 @@ const Icons = ({ type, className }) => {
       return <AiOutlineFieldTime className={className} />;
 
     case "user":
-      return <RiUserFill className={className} />;
+      return <BsPerson className={className} />;
+
     case "cancel":
       return <MdOutlineCancel />;
+
+    case "wallet":
+      return <BsWallet className={className} />;
 
     default:
       return <p>Pick an Icon Type</p>;
