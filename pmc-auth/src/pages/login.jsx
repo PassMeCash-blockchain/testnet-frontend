@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaUserCheck, FaUserLock } from "react-icons/fa";
 
-const login = () => {
+const Login = () => {
   const [pass, setpass] = useState("");
 
   useEffect(() => console.log(pass), [pass]);
@@ -71,4 +71,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
