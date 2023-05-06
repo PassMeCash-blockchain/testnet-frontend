@@ -2,6 +2,7 @@ import Image from "next/image";
 import Icons from "../atoms/Icons";
 import { conditionalClass } from "../atoms/libraries";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Header = () => {
   const urlPath = useRouter().asPath;
@@ -63,14 +64,16 @@ const Header = () => {
           <span className="w-2 h-2 absolute right-[2px] -top-[2px] bg-red-500 rounded-full block"></span>
         </div>
         {/* User Image */}
-        <div className="w-10 rounded-full overflow-hidden">
-          <Image
-            src="/assets/user-test-img-1.jpg"
-            width={1000}
-            height={1000}
-            alt="User Image"
-          />
-        </div>
+        <Link href="/profile">
+          <div className="w-10 rounded-full overflow-hidden cursor-pointer">
+            <Image
+              src="/assets/user-test-img-1.jpg"
+              width={1000}
+              height={1000}
+              alt="User Image"
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const UserContactInfo = () => {
       label: "Display name",
       value: name,
       setValueFn: setName,
-      editable: true,
+      editable: false,
     },
     {
       type: "email",
@@ -26,7 +26,7 @@ const UserContactInfo = () => {
       label: "Phone number",
       value: phoneNumber,
       setValueFn: setPhoneNumber,
-      editable: true,
+      editable: false,
     },
   ];
   return (

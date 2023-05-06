@@ -14,21 +14,21 @@ const UserPersonalInfo = () => {
       label: "Legal name",
       value: legalName,
       setValueFn: setLegalName,
-      editable: true,
+      editable: false,
     },
     {
       type: "text",
       label: "Home address",
       value: homeAddress,
       setValueFn: setHomeAddress,
-      editable: true,
+      editable: false,
     },
     {
       type: "date",
       label: "Date of birth",
       value: DOB,
       setValueFn: setDOB,
-      editable: true,
+      editable: false,
     },
   ];
 
