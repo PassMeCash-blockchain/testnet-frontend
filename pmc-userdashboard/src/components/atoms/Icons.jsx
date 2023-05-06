@@ -3,6 +3,7 @@ import {
   AiOutlineQrcode,
   AiOutlineCaretDown,
 } from "react-icons/ai";
+import { BiHomeAlt2 } from "react-icons/bi";
 import {
   BsArrowUpLeft,
   BsArrowDownRight,
@@ -15,6 +16,7 @@ import {
   BsCheckCircleFill,
   BsClockHistory,
 } from "react-icons/bs";
+import { CiBitcoin } from "react-icons/ci";
 import { MdCurrencyBitcoin, MdClose, MdCurrencyExchange } from "react-icons/md";
 import { HiChevronDown, HiMenu } from "react-icons/hi";
 import { FiMoreHorizontal, FiSearch } from "react-icons/fi";
@@ -51,6 +53,9 @@ const Icons = ({ type, className }) => {
     case "bitcoin":
       return <MdCurrencyBitcoin className={className} />;
 
+    case "bitcoin-circle":
+      return <CiBitcoin className={className} />;
+
     case "card":
       return <BsCreditCard className={className} />;
 
@@ -70,7 +75,7 @@ const Icons = ({ type, className }) => {
       return <TbArrowsUpDown className={className} />;
 
     case "home":
-      return <SlHome className={className} />;
+      return <BiHomeAlt2 className={className} />;
 
     case "infinity":
       return <BsInfinity className={className} />;

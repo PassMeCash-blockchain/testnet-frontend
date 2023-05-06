@@ -6,7 +6,7 @@ const MobileNav = () => {
   const urlPath = useRouter().asPath;
   const navs = [
     { title: "Home", link: "/", icon: "home" },
-    { title: "My Wallet", link: "", icon: "wallet" },
+    { title: "Crypto Wallets", link: "", icon: "bitcoin" },
     { title: "Cards", link: "", icon: "card" },
     { title: "Settings", link: "", icon: "setting" },
   ];
@@ -17,13 +17,17 @@ const MobileNav = () => {
         <div
           key={i}
           className={conditionalClass(
-            "grid gap-1 justify-items-center w-max cursor-pointer",
+            "grid grid-rows-[1fr_auto] gap-1 justify-items-center w-max cursor-pointer",
             urlPath === nav.link ? "text-[#874CF6]" : "text-[#B3B3B3]"
           )}
         >
           <Icons
             type={nav.icon}
-            className={conditionalClass(i === 3 ? "text-xl" : "text-lg")}
+            className={conditionalClass(
+              nav.title === "Crypto Wallets" || nav.title === "Settings"
+                ? "text-xl"
+                : "text-lg"
+            )}
           />
           <p>{nav.title}</p>
         </div>
