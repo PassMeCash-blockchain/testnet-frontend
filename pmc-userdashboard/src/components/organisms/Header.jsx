@@ -8,9 +8,13 @@ const Header = () => {
   const urlPath = useRouter().asPath;
   const navs = [
     { title: "Home", link: "/", icon: "home" },
-    { title: "Crypto Wallets", link: "", icon: "bitcoin-circle" },
-    { title: "Cards", link: "", icon: "card" },
-    { title: "Settings", link: "", icon: "setting" },
+    {
+      title: "Crypto Wallets",
+      link: "/crypto-wallets",
+      icon: "bitcoin-circle",
+    },
+    { title: "Cards", link: "/cards", icon: "card" },
+    { title: "Settings", link: "/settings", icon: "setting" },
   ];
 
   console.log();
@@ -29,30 +33,31 @@ const Header = () => {
       {/* Nav */}
       <div className="text-center hidden grid-cols-[repeat(4,_auto)] gap-10 w-max items-center mx-auto md:grid">
         {navs.map((nav, i) => (
-          <div
-            key={i}
-            className={conditionalClass(
-              "grid grid-cols-[auto_1fr] gap-3 items-end w-max cursor-pointer",
-              urlPath === nav.link ? "text-[#874CF6]" : "text-[#B3B3B3]"
-            )}
-          >
-            <Icons
-              type={nav.icon}
+          <Link key={i} href={nav.link}>
+            <div
               className={conditionalClass(
-                nav.title === "Crypto Wallets" || nav.title === "Settings"
-                  ? "text-3xl"
-                  : "text-2xl"
-              )}
-            />
-            <p
-              className={conditionalClass(
-                nav.title === "Home" && "leading-[15px]",
-                nav.title === "Cards" && "leading-[17px]"
+                "grid grid-cols-[auto_1fr] gap-3 items-end w-max cursor-pointer",
+                urlPath === nav.link ? "text-[#874CF6]" : "text-[#B3B3B3]"
               )}
             >
-              {nav.title}
-            </p>
-          </div>
+              <Icons
+                type={nav.icon}
+                className={conditionalClass(
+                  nav.title === "Crypto Wallets" || nav.title === "Settings"
+                    ? "text-3xl"
+                    : "text-2xl"
+                )}
+              />
+              <p
+                className={conditionalClass(
+                  nav.title === "Home" && "leading-[15px]",
+                  nav.title === "Cards" && "leading-[17px]"
+                )}
+              >
+                {nav.title}
+              </p>
+            </div>
+          </Link>
         ))}
       </div>
 
