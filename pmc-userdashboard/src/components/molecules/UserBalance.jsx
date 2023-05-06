@@ -1,5 +1,7 @@
 import Icons from "../atoms/Icons";
 import Send from "../organisms/Send";
+import Swap from "../organisms/Swap";
+import Recieve from "../organisms/Recieve";
 
 const UserBalance = () => {
   return (
@@ -17,20 +19,10 @@ const UserBalance = () => {
       {/* CTAs */}
       <div className="grid grid-cols-[auto_auto_auto] gap-10 w-max mt-5">
         {/* Receive */}
-        <div className="grid gap-3 justify-items-center">
-          <button className="w-10 h-10 grid place-items-center rounded-full bg-[#874CF6]">
-            <Icons type="receive" className="text-xl" />
-          </button>
-          <p className="font-medium">Receive</p>
-        </div>
+        <Recieve />
 
         {/* Swap */}
-        <div className="grid gap-3 justify-items-center">
-          <button className="w-10 h-10 grid place-items-center rounded-full bg-[#874CF6]">
-            <Icons type="swap" className="text-2xl" />
-          </button>
-          <p className="font-medium">Swap</p>
-        </div>
+        <Swap />
 
         {/* Send */}
         <Send />
