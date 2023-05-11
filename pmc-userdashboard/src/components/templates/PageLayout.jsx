@@ -8,7 +8,7 @@ const PageLayout = ({ children }) => {
       <Header />
 
       {/* Page Contents */}
-      <div className="h-full px-4 py-10 overflow-auto custom-scroll md:p-10 p">
+      <div className="h-full px-4 py-5 overflow-auto custom-scroll md:p-10">
         <div className="w-full max-w-5xl mx-auto">{children}</div>
       </div>
 

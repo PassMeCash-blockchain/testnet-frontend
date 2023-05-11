@@ -1,4 +1,5 @@
 import Icons from "../atoms/Icons";
+import { conditionalClass } from "../atoms/libraries";
 
 const VirtualCards = () => {
   const cards = [
@@ -6,23 +7,50 @@ const VirtualCards = () => {
       type: "Naira",
       name: "Antony Abdulzaq",
       number: "0987 6543 0987 6543",
-      expiryDate: "",
-      balance: "",
+      expiryDate: "18/24",
+      balance: "0.00",
+      color: "#FFFFFF",
+    },
+
+    {
+      type: "Crypto",
+      name: "Antony Abdulzaq",
+      number: "0987 6543 0987 6543",
+      expiryDate: "18/24",
+      balance: "0.00",
+      color: "#1683E7",
     },
   ];
   return (
-    <div className="mt-10">
+    <div className="mt-5 overflow-x-auto md:mt-10">
       {/* Cards */}
-      <div className="grid grid-flow-col gap-5 overflow-auto w-max">
+      <div className="grid grid-flow-col gap-5 w-max mx-auto">
         {cards.map((card, i) => (
-          <div key={i} className="border min-w-[300px] rounded-xl p-3">
+          <div
+            key={i}
+            className={conditionalClass(
+              "border min-w-[300px] rounded-xl p-3",
+              card.color !== "#FFFFFF" && "text-white"
+            )}
+            style={{ background: card.color }}
+          >
             {/* Card Type and Card Details BTN */}
-            <div className="flex justify-between items-center pb-3 border-b border-[]">
+            <div
+              className={conditionalClass(
+                "flex justify-between items-center pb-3 border-b",
+                card.color !== "#FFFFFF" && "border-[rgba(255,255,255,0.4)]"
+              )}
+            >
               {/* Card Type */}
               <p className="text-xs">{card.type} Card</p>
 
               {/* Card Details BTN */}
-              <button className="flex space-x-2 items-center bg-neutral-200 rounded-sm px-3 py-1 text-xs">
+              <button
+                className={conditionalClass(
+                  "flex space-x-2 items-center bg-neutral-200 rounded-sm px-3 py-1 text-xs",
+                  card.color !== "#FFFFFF" && "bg-[rgba(255,255,255,0.3)]"
+                )}
+              >
                 <span>Card Details</span>
                 <Icons type="arrow-right" />
               </button>
@@ -44,14 +72,14 @@ const VirtualCards = () => {
             <div className="flex justify-between items-center mt-3 text-xs">
               {/* Current Balance */}
               <div className="grid gap-1">
-                <p className="text-neutral-500">Current Balance</p>
-                <p>NGN 0.00</p>
+                <p className="opacity-80">Current Balance</p>
+                <p className="font-semibold">NGN 0.00</p>
               </div>
 
               {/* Expiry Date */}
               <div className="grid gap-1">
-                <p className="text-neutral-500">Expiry</p>
-                <p>18/24</p>
+                <p className="opacity-80">Expiry</p>
+                <p className="font-semibold">18/24</p>
               </div>
             </div>
           </div>

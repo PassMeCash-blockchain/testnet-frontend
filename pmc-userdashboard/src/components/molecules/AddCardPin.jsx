@@ -10,7 +10,7 @@ const AddCardPin = () => {
         Create a 4 digit pin
       </p>
 
-      {/* OTP */}
+      {/* Card Pin */}
       <div className="grid grid-flow-col w-max gap-8 mx-auto mt-16">
         {otpInputs.map((input, i) => (
           <CardPinInput key={i} inputRef={input} />

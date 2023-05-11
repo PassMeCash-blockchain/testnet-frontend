@@ -2,6 +2,7 @@ import AddCardPin from "@/components/molecules/AddCardPin";
 import ChooseCardToCreate from "@/components/molecules/ChooseCardToCreate";
 import CreateCardStepIndicator from "@/components/molecules/CreateCardStepIndicator";
 import CustomizeCard from "@/components/molecules/CustomizeCard";
+import FundCard from "@/components/molecules/FundCard";
 import PageLayout from "@/components/templates/PageLayout";
 
 const CreateVirtualCard = () => {
@@ -13,7 +14,8 @@ const CreateVirtualCard = () => {
       {/* Content */}
       {/* <ChooseCardToCreate /> */}
       {/* <CustomizeCard /> */}
-      <AddCardPin />
+      {/* <AddCardPin /> */}
+      <FundCard />
     </PageLayout>
   );
 };
