@@ -4,11 +4,13 @@ import PageLayout from "@/components/templates/PageLayout";
 const Security = () => {
   return (
     <PageLayout>
+      <h2 className="text-4xl hidden mb-10 md:block">Account Settings</h2>
+
       {/* Password */}
-      <div className="grid grid-cols-[1fr_auto] gap-10 items-center border border-[rgba(179,_179,_179,_0.5] rounded-md p-5">
+      <div className="grid gap-5 items-center border border-[rgba(179,_179,_179,_0.5] rounded-md p-5 sm:grid-cols-[1fr_auto] sm:gap-5">
         <div className="grid gap-3">
           <h3 className="text-2xl font-semibold">Password</h3>
-          <p>
+          <p className="text-neutral-500">
             Remember not to store your password in your email or cloud and don’t
             share it with anyone.
           </p>
@@ -22,10 +24,12 @@ const Security = () => {
 
       {/* Phone Numbers */}
       <div className="mt-10 border border-[rgba(179,_179,_179,_0.5] rounded-md">
-        <div className="grid grid-cols-[1fr_auto] gap-10 items-center p-5">
+        <div className="grid gap-5 items-center p-5 sm:grid-cols-[1fr_auto] sm:gap-5">
           <div className="grid gap-3">
             <h3 className="text-2xl font-semibold">Phone numbers</h3>
-            <p>Make sure to keep your primary phone number up-to-date.</p>
+            <p className="text-neutral-500">
+              Make sure to keep your primary phone number up-to-date.
+            </p>
           </div>
 
           {/* Change Password */}
