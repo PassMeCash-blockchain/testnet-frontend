@@ -2,6 +2,7 @@ import {
   AiOutlineBank,
   AiOutlineQrcode,
   AiOutlineCaretDown,
+  AiOutlinePlus,
 } from "react-icons/ai";
 import { BiHomeAlt2 } from "react-icons/bi";
 import {
@@ -18,7 +19,12 @@ import {
 } from "react-icons/bs";
 import { CiBitcoin } from "react-icons/ci";
 import { MdCurrencyBitcoin, MdClose, MdCurrencyExchange } from "react-icons/md";
-import { HiChevronDown, HiMenu } from "react-icons/hi";
+import {
+  HiChevronDown,
+  HiMenu,
+  HiOutlineArrowRight,
+  HiOutlineArrowLeft,
+} from "react-icons/hi";
 import { FiMoreHorizontal, FiSearch } from "react-icons/fi";
 import { TbCurrencyNaira, TbSettings, TbArrowsUpDown } from "react-icons/tb";
 import { RiLockPasswordFill } from "react-icons/ri";
@@ -44,6 +50,12 @@ export const ArrowIcon = ({ direction }) => {
 
 const Icons = ({ type, className }) => {
   switch (type) {
+    case "arrow-right":
+      return <HiOutlineArrowRight className={className} />;
+
+    case "arrow-left":
+      return <HiOutlineArrowLeft className={className} />;
+
     case "bank":
       return <AiOutlineBank className={className} />;
 
@@ -94,6 +106,9 @@ const Icons = ({ type, className }) => {
 
     case "people":
       return <BsPeople className={className} />;
+
+    case "plus":
+      return <AiOutlinePlus className={className} />;
 
     case "QRcode":
       return <AiOutlineQrcode className={className} />;
