@@ -5,7 +5,7 @@ const ChooseCardToCreate = () => {
         Choose a virtual card to create.
       </p>
 
-      <div className="grid grid-flow-col gap-10 mt-10 w-max mx-auto">
+      <div className="grid gap-10 mt-10 w-max mx-auto md:grid-flow-col">
         {/* Naira Card */}
         <div className="border border-[rgba(179,_179,_179,_0.5)] rounded-2xl max-w-xs p-5 cursor-pointer">
           <p className="border-b border-[rgba(179,_179,_179,_0.5)] pb-5 text-center font-semibold">
@@ -29,11 +29,11 @@ const ChooseCardToCreate = () => {
         </div>
       </div>
 
-      <p className="text-center text-lg max-w-md mx-auto mt-16">
+      <p className="text-center text-lg max-w-md mx-auto mt-8 md:mt-16">
         Add a new virtual card to be able to make quick online transactions.
       </p>
 
-      <button className="text-white bg-[#874CF6] py-3 rounded-md w-full max-w-xs block mx-auto mt-16">
+      <button className="text-white bg-[#874CF6] py-3 rounded-md w-full max-w-xs block mx-auto mt-8 md:mt-16">
         Create Card
       </button>
     </div>

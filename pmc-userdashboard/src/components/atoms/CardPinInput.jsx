@@ -11,7 +11,7 @@ const CardPinInput = ({ inputRef }) => {
   return (
     <input
       type="number"
-      className="w-20 h-20 border border-[#874CF6] rounded-md outline-none text-center text-3xl text-[#874CF6]"
+      className="w-10 h-10 border border-[#874CF6] rounded-md outline-none text-center text-3xl text-[#874CF6] md:w-20 md:h-20"
       onChange={(e) => handleInput(e)}
       ref={inputRef}
     />

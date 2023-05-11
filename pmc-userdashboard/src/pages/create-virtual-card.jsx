@@ -12,10 +12,10 @@ const CreateVirtualCard = () => {
       <CreateCardStepIndicator />
 
       {/* Content */}
-      {/* <ChooseCardToCreate /> */}
+      <ChooseCardToCreate />
       {/* <CustomizeCard /> */}
       {/* <AddCardPin /> */}
-      <FundCard />
+      {/* <FundCard /> */}
     </PageLayout>
   );
 };
