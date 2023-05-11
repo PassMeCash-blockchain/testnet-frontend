@@ -3,9 +3,9 @@ const CreateCardStepIndicator = () => {
     <div>
       {/* Texts */}
       <div className="grid grid-cols-[auto_1fr_auto]">
-        <p className="text-lg font-medium">Create New Card</p>
-        <p className="text-center text-lg font-medium pr-10">Add Pin</p>
-        <p className="text-lg font-medium">Fund Card</p>
+        <p className="text-sm font-medium">Create New Card</p>
+        <p className="text-center text-sm font-medium pr-5">Add Pin</p>
+        <p className="text-sm font-medium">Fund Card</p>
       </div>
 
       {/* Circles and Lines */}
