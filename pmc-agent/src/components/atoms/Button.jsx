@@ -2,7 +2,7 @@ import React from "react";
 import { conditionalClass } from "./libraries";
 import { BsArrowLeft, ArrowIcon } from "./Icons";
 import clsx from "clsx";
-const Button = ({ filled, className, children, icon, type }) => {
+const Button = ({ filled, className, children, icon, type, rounded }) => {
   switch (type) {
     case "Icon":
       return (
@@ -23,9 +23,22 @@ const Button = ({ filled, className, children, icon, type }) => {
       return (
         <button
           className={clsx(
-            "border border-[#874CF6]  py-3 px-5 cursor-pointer  rounded-md",
+            "border border-[#874CF6]  py-3 px-5 cursor-pointer",
             filled ? "bg-[#874CF6] text-white" : "text-[#874CF6]",
-            className
+            rounded ? "rounded-full" : "rounded-md"
+          )}
+        >
+          {children}
+        </button>
+      );
+
+    case "completed":
+      return (
+        <button
+          className={clsx(
+            "border border-[#4564D6]  py-2 cursor-pointer",
+            filled ? "bg-[#4564D6] text-white" : "text-[#4564D6]",
+            rounded ? "rounded-full" : "rounded-md"
           )}
         >
           {children}
@@ -35,7 +48,11 @@ const Button = ({ filled, className, children, icon, type }) => {
     case "neutral":
       return (
         <button
-          className={clsx("bg-inputColor text-secondaryColor", className)}
+          className={clsx(
+            "bg-inputColor text-secondaryColor",
+            className,
+            rounded ? "rounded-full" : "rounded-md"
+          )}
         >
           {children}
         </button>
@@ -60,6 +77,19 @@ const Button = ({ filled, className, children, icon, type }) => {
         >
           {children}
         </div>
+      );
+
+    case "pending":
+      return (
+        <button
+          className={clsx(
+            "border border-[#F3AF0A] py-2 cursor-pointer",
+            filled ? "bg-[#F3AF0A] text-white" : "text-[#F3AF0A]",
+            rounded ? "rounded-full" : "rounded-md"
+          )}
+        >
+          {children}
+        </button>
       );
     default:
       break;

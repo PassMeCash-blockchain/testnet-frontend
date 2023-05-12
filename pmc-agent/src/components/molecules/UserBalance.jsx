@@ -5,7 +5,7 @@ import Recieve from "../organisms/Recieve";
 
 const UserBalance = () => {
   return (
-    <div className="border-b border-[rgba(179,_179,_179,_0.5)] pb-5">
+    <div className=" pb-5">
       <p className="text-[#807A8B] font-medium">Your balance</p>
       {/* Amount */}
       <div className="mt-3 grid grid-cols-[auto_auto_auto] gap-2 items-center w-max">
