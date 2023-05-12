@@ -16,7 +16,7 @@ const Send = () => {
         className="grid gap-3 justify-items-center"
         onClick={() => setIsModal(true)}
       >
-        <button className="w-10 h-10 grid place-items-center rounded-full bg-[#874CF6]">
+        <button className="w-10 h-10 grid place-items-center rounded-full text-white bg-[#874CF6]">
           <Icons type="send" className="text-xl" />
         </button>
         <p className="font-medium">Send</p>

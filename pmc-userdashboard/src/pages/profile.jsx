@@ -8,7 +8,7 @@ const Profile = () => {
   return (
     <PageLayout>
       <div className="grid gap-5">
-        <h2 className="text-4xl hidden md:block">Account Settings</h2>
+        <h2 className="text-4xl hidden md:block">Profile Details</h2>
 
         {/* User Details */}
         <UserDetails />
