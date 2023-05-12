@@ -1,8 +1,13 @@
-import ChartCard from "@/components/molecules/ChartCard";
-import Image from "next/image";
+import React from "react";
+import Barchart from "@/components/molecules/charts/Barchart";
+import RequestCash from "@/components/molecules/RequestCash";
 
-export default function Home() {
+const page = () => {
   return (
-    <ChartCard />
+    <div>
+      <RequestCash />
+    </div>
   );
-}
+};
+
+export default page;
