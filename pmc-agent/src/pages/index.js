@@ -8,6 +8,7 @@ import DeliverCash from "@/components/molecules/DeliverCash";
 import CompletedCashRequest from "@/components/molecules/CompletedCashRequest";
 import ConfirmCash from "@/components/molecules/ConfirmCash";
 import CancelCashRequest from "@/components/molecules/CancelCashRequest";
+import UserRequests from "@/components/molecules/UserRequests";
 
 const archivo = Archivo({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ export default function Home() {
     <main className={archivo.className}>
       <PageLayout>
         <UserBalance />
-        <UserTransactions />
+        <UserRequests />
       </PageLayout>
     </main>
   );
