@@ -1,10 +1,11 @@
 import React from "react";
 import Barchart from "@/components/molecules/charts/Barchart";
+import RequestCash from "@/components/molecules/RequestCash";
 
 const page = () => {
   return (
     <div>
-      <Barchart />
+      <RequestCash />
     </div>
   );
 };

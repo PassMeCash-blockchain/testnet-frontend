@@ -32,16 +32,39 @@ const ChartCard = () => {
       {schema.map((input, i) => (
         <div key={i}>
           <div className="px-3 border border-[#B3B3B3] rounded-lg">
-            <div className="grid grid-cols-3 py-5">
-              <div className="col-span-2 ">
-                <h3 className="font-bold text-lg pt">{input.total}</h3>
+            <div className="grid grid-cols-3 py-3 place-content-center">
+              <div className="col-span-2">
+                <h3 className="font-bold text-lg">{input.total}</h3>
                 <p className="text-xs">{input.percentage}</p>
               </div>
-              <div></div>
+              <div className="relative h-20 w-20">
+                {/* <svg width="200" height="200">
+                  <circle
+                    r="70"
+                    cx="100"
+                    cy="100"
+                    fill="transparent"
+                    stroke="lightgrey"
+                    stroke-width="2rem"
+                    stroke-dasharray="439.8"
+                    stroke-dashoffset="0"
+                  ></circle>
+                  <circle
+                    r="70"
+                    cx="100"
+                    cy="100"
+                    fill="transparent"
+                    stroke="blue"
+                    stroke-width="2rem"
+                    stroke-dasharray="439.8"
+                    stroke-dashoffset="66"
+                  ></circle>
+                </svg> */}
+              </div>
             </div>
             <hr className="border-1"></hr>
             <div className="grid grid-cols-2 py-3">
-              <div className="flex gap-1">
+              <div className="flex">
                 <div className="relative h-5 w-5">
                   <Image src="assets/TrendDown.svg" fill alt="trend down" />
                 </div>
