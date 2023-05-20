@@ -2,12 +2,8 @@ import React from "react";
 import { conditionalClass } from "./libraries";
 import { BsArrowLeft, ArrowIcon } from "./Icons";
 import clsx from "clsx";
-<<<<<<< HEAD
 
-const Button = ({ filled, className, children, icon, type }) => {
-=======
 const Button = ({ filled, className, children, icon, type, rounded }) => {
->>>>>>> 63b4e33687bcd5ab19a5a6b2feaea8ab48f8d3c3
   switch (type) {
     case "Icon":
       return (
