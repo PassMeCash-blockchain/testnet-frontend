@@ -4,7 +4,7 @@ import VirtualCards from "@/components/organisms/VirtualCards";
 import PageLayout from "@/components/templates/PageLayout";
 import { useState } from "react";
 
-const cards = () => {
+const Cards = () => {
   const [cardState, setCardState] = useState("virtual");
   const navs = [
     { title: "Virtual Cards", link: "virtual" },
@@ -16,6 +16,7 @@ const cards = () => {
       <div className="grid grid-cols-2 gap-10 w-full max-w-md mx-auto">
         {navs.map((nav) => (
           <div
+            key={i}
             className={conditionalClass(
               "cursor-pointer rounded-md text-center py-2",
               cardState === nav.link
@@ -41,4 +42,4 @@ const cards = () => {
   );
 };
 
-export default cards;
+export default Cards;
