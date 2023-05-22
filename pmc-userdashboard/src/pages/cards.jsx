@@ -10,6 +10,7 @@ const Cards = () => {
     { title: "Virtual Cards", link: "virtual" },
     { title: "Physical Cards", link: "physical" },
   ];
+  
   return (
     <PageLayout>
       {/* Nav */}

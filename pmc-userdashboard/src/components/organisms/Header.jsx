@@ -17,7 +17,6 @@ const Header = () => {
     { title: "Settings", link: "/settings", icon: "setting" },
   ];
 
-  console.log();
   return (
     <div className="px-4 py-4 shadow-[0px_-2px_14px_-5px_rgba(0,0,0,0.3)] grid grid-cols-[auto_1fr] gap-10 items-center font-normal text-base md:px-8 md:grid-cols-[auto_1fr_auto]">
       {/* Logo */}
