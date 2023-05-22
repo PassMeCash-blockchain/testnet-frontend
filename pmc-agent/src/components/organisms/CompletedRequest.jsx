@@ -3,7 +3,7 @@ import Button from "../atoms/Button";
 import Image from "next/image";
 import Icons from "../atoms/Icons";
 
-const AvailableRequest = () => {
+const CompletedRequest = () => {
   const tableRowGrid = "grid gap-1 items-center grid-cols-6";
   const RequestHeader = [
     "Name",
@@ -192,4 +192,4 @@ const AvailableRequest = () => {
   );
 };
 
-export default AvailableRequest;
+export default CompletedRequest;

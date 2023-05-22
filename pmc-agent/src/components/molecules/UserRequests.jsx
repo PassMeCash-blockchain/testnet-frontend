@@ -1,11 +1,8 @@
 import { useState } from "react";
 import clsx from "clsx";
-import Icons from "../atoms/Icons";
-import Image from "next/image";
 import AvailableRequet from "../organisms/AvailableRequet";
 import OngoingRequest from "../organisms/OngoingRequest";
 import CompletedRequest from "../organisms/CompletedRequest";
-import Button from "../atoms/Button";
 
 const UserRequests = () => {
   const [table, setTable] = useState("Available Request");
