@@ -1,6 +1,6 @@
 import React from "react";
 import { conditionalClass } from "./libraries";
-import { BsArrowLeft, ArrowIcon } from "./Icons";
+import { ArrowIcon } from "./Icons";
 import clsx from "clsx";
 // button random
 const Button = ({ filled, className, children, icon, type }) => {
