@@ -45,7 +45,7 @@ const Button = ({ filled, className, children, icon, type }) => {
     case "back":
       return (
         <button className="grid grid-cols-[auto_1fr] items-center gap-2 mt-5 font-medium">
-          <BsArrowLeft />
+          {/* <BsArrowLeft /> */}
           Back to login
         </button>
       );
