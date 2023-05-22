@@ -1,4 +1,4 @@
-import Modal from "../atoms/Modal";
+import Modal from "../templates/Modal";
 import Button from "../atoms/Button";
 const ThanksModal = () => {
   return (
