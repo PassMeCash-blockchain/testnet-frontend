@@ -5,8 +5,9 @@ import UserTransactions from "@/components/molecules/UserTransactions";
 import PageLayout from "@/components/templates/PageLayout";
 import clsx from "clsx";
 import { useState } from "react";
+import Image from "next/image";
 
-const CryptoWallets = () => {
+const BulkTransfer = () => {
   const cryptoWallets = [
     { coin: "MATIC", logo: "/assets/PolygonBadge.svg", amount: 500 },
     { coin: "BNB", logo: "/assets/PolygonBadge.svg", amount: 400 },
@@ -326,4 +327,4 @@ const CryptoWallets = () => {
   );
 };
 
-export default CryptoWallets;
+export default BulkTransfer;

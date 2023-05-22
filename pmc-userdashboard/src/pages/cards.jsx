@@ -15,7 +15,7 @@ const Cards = () => {
     <PageLayout>
       {/* Nav */}
       <div className="grid grid-cols-2 gap-10 w-full max-w-md mx-auto">
-        {navs.map((nav) => (
+        {navs.map((nav, i) => (
           <div
             key={i}
             className={conditionalClass(
