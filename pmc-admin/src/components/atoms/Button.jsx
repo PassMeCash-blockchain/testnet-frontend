@@ -1,6 +1,6 @@
 import React from "react";
 import { conditionalClass } from "./libraries";
-import { BsArrowLeft, ArrowIcon } from "./Icons";
+import { ArrowIcon } from "./Icons";
 import clsx from "clsx";
 // button random
 const Button = ({ filled, className, children, icon, type }) => {
@@ -45,7 +45,7 @@ const Button = ({ filled, className, children, icon, type }) => {
     case "back":
       return (
         <button className="grid grid-cols-[auto_1fr] items-center gap-2 mt-5 font-medium">
-          <BsArrowLeft />
+          {/* <BsArrowLeft /> */}
           Back to login
         </button>
       );

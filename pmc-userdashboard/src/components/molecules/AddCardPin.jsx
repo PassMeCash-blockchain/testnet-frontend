@@ -3,7 +3,7 @@ import Icons from "../atoms/Icons";
 import CardPinInput from "../atoms/CardPinInput";
 
 const AddCardPin = () => {
-  const otpInputs = [...Array(4).map(() => useRef(null))];
+  const otpInputs = [...Array(4).map(() => null)];
   return (
     <div className="mt-10">
       <p className="text-2xl font-thin italic text-center">
