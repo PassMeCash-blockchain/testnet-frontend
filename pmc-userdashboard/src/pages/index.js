@@ -8,15 +8,19 @@ import SendToRecipients from "@/components/molecules/SendToRecipients";
 import TransferSucessful from "@/components/molecules/TransferSucessful";
 import SelectRecipient from "@/components/molecules/SelectRecipient";
 import BulkTranfer from "./bulkTransfer";
+import SendTransferToBeneficiary from "@/components/molecules/SendTransferToBeneficiary";
+import SendToPassMeCashAcct from "@/components/molecules/SendToPassMeCashAcct";
+import SendToOtherBanks from "@/components/molecules/SendToOtherBanks";
 
 const archivo = Archivo({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={archivo.className}>
-      <PageLayout>
-        <BulkTranfer />
-      </PageLayout>
-    </main>
+    <SendToOtherBanks/>
+    // <main className={archivo.className}>
+    //   <PageLayout>
+    //     <BulkTranfer />
+    //   </PageLayout>
+    // </main>
   );
 }
