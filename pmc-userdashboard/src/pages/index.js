@@ -11,12 +11,13 @@ import BulkTranfer from "./bulkTransfer";
 import SendTransferToBeneficiary from "@/components/molecules/SendTransferToBeneficiary";
 import SendToPassMeCashAcct from "@/components/molecules/SendToPassMeCashAcct";
 import SendToOtherBanks from "@/components/molecules/SendToOtherBanks";
+import EnterPassword from "@/components/molecules/EnterPassword";
 
 const archivo = Archivo({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <SendToOtherBanks/>
+    <EnterPassword />
     // <main className={archivo.className}>
     //   <PageLayout>
     //     <BulkTranfer />
