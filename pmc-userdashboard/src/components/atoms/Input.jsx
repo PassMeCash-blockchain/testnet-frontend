@@ -3,7 +3,7 @@ import { conditionalClass } from "./libraries";
 import { useState } from "react";
 import Icons, { ArrowIcon } from "./Icons";
 import clsx from "clsx";
-const Input = ({ onChange, className, type,children,placeholder,value,label,options }) => {
+const Input = ({ onChange, className, type,children,placeholder,value,label,options, setValueFn }) => {
   const basicInputClasses = "bg-[#F5F5F5] rounded-md px-5 py-3";
   const [isDropDown, setIsDropDown] = useState(false);
   switch (type) {

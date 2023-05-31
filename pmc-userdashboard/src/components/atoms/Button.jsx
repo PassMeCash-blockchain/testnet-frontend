@@ -36,7 +36,7 @@ const Button = ({ filled, className, children, icon, type, rounded }) => {
     case "neutral":
       return (
         <button
-          className={clsx("bg-inputColor text-secondaryColor", className)}
+          className={clsx("bg-inputColor py-3 px-5 rounded-md text-secondaryColor", className)}
         >
           {children}
         </button>
