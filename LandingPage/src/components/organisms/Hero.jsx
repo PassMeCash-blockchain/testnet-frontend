@@ -5,6 +5,8 @@ import Text from "../atoms/Text";
 const Hero = async () => {
   const isDesktop = window.screen.width >= 768;
   const isMobile = window.screen.width <= 768;
+
+  console.log(isDesktop,isMobile)
   return (
     <div className="grid container mx-auto gap-10 page-space mt-10 lg:mt-20 lg:grid-cols-[1fr_45vw]">
       {/* Content */}
@@ -32,19 +34,22 @@ const Hero = async () => {
       {/* Side Image */}
       <div className="relative w-full max-w-xl mx-auto lg:max-w-none">
         {
-          isDesktop ? <Image
+          isDesktop && <Image
           src="/assets/hero-img.png"
-          width={1000}
-          height={1000}
-          alt="hero image"
-        /> : <Image
-          src="/assets/mobile.png"
           width={1000}
           height={1000}
           alt="hero image"
         />
         }
 
+        {
+          isMobile && <Image
+          src="/assets/mobile.png"
+          width={1000}
+          height={1000}
+          alt="hero image"
+        />
+        }
         
       </div>
     </div>
