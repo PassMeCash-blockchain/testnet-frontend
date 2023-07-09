@@ -7,7 +7,7 @@ import ThanksModal from "@/components/molecules/ThanksModal";
 import SendToRecipients from "@/components/molecules/SendToRecipients";
 import TransferSucessful from "@/components/molecules/TransferSucessful";
 import SelectRecipient from "@/components/molecules/SelectRecipient";
-import BulkTranfer from "./bulkTransfer";
+import BulkTranfer from "./BulkTransfer";
 import CompledtedModal from "@/components/molecules/CompletedModal";
 import CanceledScheduledPayment from "@/components/molecules/CanceledScheduledPayment";
 import ScheduledSuccessful from "@/components/molecules/ScheduleSuccessful";
