@@ -4,7 +4,6 @@ import UserBalance from "@/components/molecules/UserBalance";
 import UserTransactions from "@/components/molecules/UserTransactions";
 import ThankYou from "@/components/molecules/ThankYou";
 import ThanksModal from "@/components/molecules/ThanksModal";
-import SchedulePayment from "@/components/molecules/SchedulePaymentModal";
 import SendToRecipients from "@/components/molecules/SendToRecipients";
 import TransferSucessful from "@/components/molecules/TransferSucessful";
 import SelectRecipient from "@/components/molecules/SelectRecipient";
