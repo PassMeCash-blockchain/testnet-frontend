@@ -20,7 +20,7 @@ export default function Home() {
     <main className={archivo.className}>
       <PageLayout>
         <BulkTranfer />
-        <ScheduledSuccessful />
+        {/* <ScheduledSuccessful /> */}
       </PageLayout>
     </main>
   );

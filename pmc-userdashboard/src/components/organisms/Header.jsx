@@ -8,11 +8,11 @@ const Header = () => {
   const urlPath = useRouter().asPath;
   const navs = [
     { title: "Home", link: "/", icon: "home" },
-    {
-      title: "Crypto Wallets",
-      link: "/crypto-wallets",
-      icon: "bitcoin-circle",
-    },
+    // {
+    //   title: "Crypto Wallets",
+    //   link: "/crypto-wallets",
+    //   icon: "bitcoin-circle",
+    // },
     { title: "Cards", link: "/cards", icon: "card" },
     { title: "Settings", link: "/settings", icon: "setting" },
   ];
