@@ -19,6 +19,7 @@ export default function Home() {
     <main className={archivo.className}>
       <PageLayout>
         <BulkTranfer />
+        {/* <ScheduledSuccessful /> */}
       </PageLayout>
     </main>
   );

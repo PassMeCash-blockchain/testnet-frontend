@@ -32,7 +32,7 @@ function SelectedCryptoWallet({ selectedWallet, setSelectedWallet }) {
       {/* Crypto Balance */}
       <div className="mt-5">
         <p className="font-semibold text-[22px]">{selectedWallet.coin}</p>
-        <p className="text-4xl font-semibold leading-[30px  ]">
+        <p className="text-4xl font-semibold leading-[30px]">
           {selectedWallet.amount}.00
         </p>
       </div>
@@ -40,10 +40,10 @@ function SelectedCryptoWallet({ selectedWallet, setSelectedWallet }) {
       {/* CTAs */}
       <div className="grid grid-cols-[auto_auto_auto] gap-10 w-max mt-5">
         {/* Receive */}
-        <Recieve />
+        <Recieve walletType="crypto" />
 
         {/* Swap */}
-        <Swap />
+        {/* <Swap /> */}
 
         {/* Send */}
         <Send />
