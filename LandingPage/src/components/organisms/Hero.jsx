@@ -3,6 +3,8 @@ import Button from "../atoms/Button";
 import Text from "../atoms/Text";
 
 const Hero = async () => {
+
+
   return (
     <div className="grid container mx-auto gap-10 page-space mt-10 lg:mt-20 lg:grid-cols-[1fr_45vw]">
       {/* Content */}
@@ -29,12 +31,17 @@ const Hero = async () => {
 
       {/* Side Image */}
       <div className="relative w-full max-w-xl mx-auto lg:max-w-none">
-        <Image
+        {
+           <Image
           src="/assets/hero-img.png"
           width={1000}
           height={1000}
           alt="hero image"
         />
+        }
+
+      
+        
       </div>
     </div>
   );
